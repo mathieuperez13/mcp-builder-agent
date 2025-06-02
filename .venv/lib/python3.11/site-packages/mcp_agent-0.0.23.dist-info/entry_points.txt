@@ -1,0 +1,6 @@
+[console_scripts]
+mcp-agent = mcp_agent.cli.__main__:app
+mcp_agent = mcp_agent.cli.__main__:app
+mcpagent = mcp_agent.cli.__main__:app
+prompt-server = mcp_agent.mcp.prompts.__main__:main
+silsila = mcp_agent.cli.__main__:app

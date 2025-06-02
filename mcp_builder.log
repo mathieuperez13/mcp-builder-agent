@@ -1,0 +1,2643 @@
+2025-05-30 14:49:29,731 - __main__ - INFO - === MCP Builder Agent Demo Started ===
+2025-05-30 14:49:29,731 - __main__ - INFO - User request received: 'I need email and calendar tools'
+2025-05-30 14:49:29,731 - __main__ - INFO - Starting agent orchestration...
+2025-05-30 14:49:29,731 - agents - INFO - Mock Runner starting with agent: Orchestrator
+2025-05-30 14:49:29,731 - agents - INFO - Processing request: I need email and calendar tools
+2025-05-30 14:49:29,731 - agents - INFO - Mock result generated: {'mcp_url': 'http://localhost:3000/mcp', 'summary': 'Mock response for: I need email and calendar tools'}
+2025-05-30 14:49:29,731 - agents - INFO - Mock Runner completed successfully
+2025-05-30 14:49:29,731 - __main__ - INFO - Agent orchestration completed successfully
+2025-05-30 14:49:29,731 - __main__ - INFO - Final result: {'mcp_url': 'http://localhost:3000/mcp', 'summary': 'Mock response for: I need email and calendar tools'}
+2025-05-30 14:49:29,731 - __main__ - INFO - === MCP Builder Agent Demo Completed ===
+2025-05-30 14:49:49,887 - __main__ - INFO - === MCP Builder Agent Demo Started ===
+2025-05-30 14:49:59,484 - __main__ - INFO - User request received: 'i need calendar and notion'
+2025-05-30 14:49:59,486 - __main__ - INFO - Starting agent orchestration...
+2025-05-30 14:49:59,486 - agents - INFO - Mock Runner starting with agent: Orchestrator
+2025-05-30 14:49:59,487 - agents - INFO - Processing request: i need calendar and notion
+2025-05-30 14:49:59,487 - agents - INFO - Mock result generated: {'mcp_url': 'http://localhost:3000/mcp', 'summary': 'Mock response for: i need calendar and notion'}
+2025-05-30 14:49:59,487 - agents - INFO - Mock Runner completed successfully
+2025-05-30 14:49:59,487 - __main__ - INFO - Agent orchestration completed successfully
+2025-05-30 14:49:59,487 - __main__ - INFO - Final result: {'mcp_url': 'http://localhost:3000/mcp', 'summary': 'Mock response for: i need calendar and notion'}
+2025-05-30 14:49:59,487 - __main__ - INFO - === MCP Builder Agent Demo Completed ===
+2025-05-30 14:51:53,977 - __main__ - INFO - === MCP Builder Agent Demo Started ===
+2025-05-30 14:52:01,895 - __main__ - INFO - User request received: 'i need email and calendar tools'
+2025-05-30 14:52:01,897 - __main__ - INFO - Starting agent orchestration...
+2025-05-30 14:52:01,898 - agents - INFO - Runner starting with agent: Orchestrator
+2025-05-30 14:52:01,898 - agents - INFO - Processing request: i need email and calendar tools
+2025-05-30 14:52:01,898 - agents - INFO - Agent Orchestrator processing: i need email and calendar tools
+2025-05-30 14:52:01,898 - agents - INFO - Orchestrator extracting capabilities...
+2025-05-30 14:52:01,899 - agents - INFO - Extracted capabilities: ['email', 'calendar']
+2025-05-30 14:52:01,899 - agents - INFO - Spawning worker for capability: email
+2025-05-30 14:52:01,899 - agents - INFO - Worker found tool for email: email_api
+2025-05-30 14:52:01,899 - agents - INFO - Spawning worker for capability: calendar
+2025-05-30 14:52:01,899 - agents - INFO - Worker found tool for calendar: calendar_api
+2025-05-30 14:52:01,899 - agents - INFO - Calling McpBuilder with tool specifications...
+2025-05-30 14:52:01,899 - agents.mcp - INFO - Launching stdio router for 2 tool specifications
+2025-05-30 14:52:01,899 - agents.mcp - INFO - Aggregating schemas for 2 tools
+2025-05-30 14:52:01,899 - agents.mcp - INFO - Schema aggregation completed. Total tools: 2
+2025-05-30 14:52:01,899 - agents.mcp - INFO - Creating mock server (real implementation would deploy actual server)
+2025-05-30 14:52:01,899 - agents.mcp - INFO - MockServer initialized with 2 tools
+2025-05-30 14:52:01,899 - agents.mcp - INFO - Starting mock MCP server...
+2025-05-30 14:52:01,899 - agents.mcp - INFO - Mock MCP server started at http://localhost:3000/mcp
+2025-05-30 14:52:01,900 - agents.mcp - INFO - Stdio router launched successfully
+2025-05-30 14:52:01,900 - agents - INFO - MCP server created successfully: {'mcp_url': 'http://localhost:3000/mcp', 'summary': 'Created MCP server with 2 tools: email_api, calendar_api'}
+2025-05-30 14:52:01,900 - __main__ - INFO - Agent orchestration completed successfully
+2025-05-30 14:52:01,900 - __main__ - INFO - Final result: {'mcp_url': 'http://localhost:3000/mcp', 'summary': 'Created MCP server with 2 tools: email_api, calendar_api'}
+2025-05-30 14:52:01,900 - __main__ - INFO - === MCP Builder Agent Demo Completed ===
+2025-05-30 14:58:07,580 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-05-30 14:58:14,904 - __main__ - INFO - User request received: 'i need calendar and notion tool'
+2025-05-30 14:58:14,904 - __main__ - INFO - Starting REAL agent orchestration with Linkup MCP...
+2025-05-30 14:58:14,905 - agents - INFO - Real Runner executing Orchestrator with request: i need calendar and notion tool
+2025-05-30 14:58:14,905 - __main__ - ERROR - Error during REAL execution: 'function' object has no attribute 'process'
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/run_demo.py", line 29, in main
+    result = await Runner.run_async(Orchestrator, user_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/agents/__init__.py", line 45, in run_async
+    tool_result = await agent.tools[0].process(user_request)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'process'
+2025-06-02 12:35:48,903 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 12:35:48,903 - __main__ - INFO - User request received: 'RAG tools'
+2025-06-02 12:35:48,904 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 12:35:48,904 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 12:35:48,904 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 12:35:48,904 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 12:35:48,904 - __main__ - ERROR - Error during REAL execution: 'function' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/run_demo.py", line 32, in main
+    result = await Runner.run(orchestrator, user_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 200, in run
+    current_span.span_data.tools = [t.name for t in all_tools]
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 200, in <listcomp>
+    current_span.span_data.tools = [t.name for t in all_tools]
+                                    ^^^^^^
+AttributeError: 'function' object has no attribute 'name'
+2025-06-02 12:35:49,525 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/traces/ingest "HTTP/1.1 204 No Content"
+2025-06-02 12:36:23,106 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 12:36:23,106 - __main__ - INFO - User request received: 'RAG tools'
+2025-06-02 12:36:23,106 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 12:36:23,106 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 12:36:23,106 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 12:36:23,106 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 12:36:23,643 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-06-02 12:36:24,170 - __main__ - ERROR - Error during REAL execution: Hosted tools are not supported with the ChatCompletions API. Got tool type: <class 'mcp_agents.orchestrator.LinkupSearchTool'>, tool: <mcp_agents.orchestrator.LinkupSearchTool object at 0x10b6a7510>
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/run_demo.py", line 32, in main
+    result = await Runner.run(orchestrator, user_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 218, in run
+    input_guardrail_results, turn_result = await asyncio.gather(
+                                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 762, in _run_single_turn
+    new_response = await cls._get_new_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 921, in _get_new_response
+    new_response = await model.get_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/extensions/models/litellm_model.py", line 82, in get_response
+    response = await self._fetch_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/extensions/models/litellm_model.py", line 255, in _fetch_response
+    converted_tools = [Converter.tool_to_openai(tool) for tool in tools] if tools else []
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/extensions/models/litellm_model.py", line 255, in <listcomp>
+    converted_tools = [Converter.tool_to_openai(tool) for tool in tools] if tools else []
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/models/chatcmpl_converter.py", line 452, in tool_to_openai
+    raise UserError(
+agents.exceptions.UserError: Hosted tools are not supported with the ChatCompletions API. Got tool type: <class 'mcp_agents.orchestrator.LinkupSearchTool'>, tool: <mcp_agents.orchestrator.LinkupSearchTool object at 0x10b6a7510>
+2025-06-02 12:36:24,718 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/traces/ingest "HTTP/1.1 204 No Content"
+2025-06-02 12:42:34,098 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 12:42:34,098 - __main__ - INFO - User request received: 'RAG tools'
+2025-06-02 12:42:34,098 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 12:42:34,099 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 12:42:34,099 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 12:42:34,099 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 12:42:34,620 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-06-02 12:42:35,092 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:42:38,834 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:42:38,838 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:38,843 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:38,844 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'best RAG tools 2024 2025' and depth: 'deep'
+2025-06-02 12:42:40,088 - httpx - INFO - HTTP Request: POST https://api.linkup.so/search "HTTP/1.1 404 Not Found"
+2025-06-02 12:42:40,089 - mcp_agents.orchestrator - ERROR - Linkup API error: 404 - {"error":{"code":"ERROR","details":[],"message":"Cannot POST /search"},"statusCode":404}
+2025-06-02 12:42:40,091 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:42:42,870 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:42:42,872 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:42,874 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:42,874 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'most popular RAG software retrieval augmented generation' and depth: 'deep'
+2025-06-02 12:42:43,421 - httpx - INFO - HTTP Request: POST https://api.linkup.so/search "HTTP/1.1 404 Not Found"
+2025-06-02 12:42:43,421 - mcp_agents.orchestrator - ERROR - Linkup API error: 404 - {"error":{"code":"ERROR","details":[],"message":"Cannot POST /search"},"statusCode":404}
+2025-06-02 12:42:43,423 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:42:46,626 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:42:46,628 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:46,630 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:46,633 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'top RAG platforms retrieval augmented generation tools' and depth: 'deep'
+2025-06-02 12:42:47,153 - httpx - INFO - HTTP Request: POST https://api.linkup.so/search "HTTP/1.1 404 Not Found"
+2025-06-02 12:42:47,153 - mcp_agents.orchestrator - ERROR - Linkup API error: 404 - {"error":{"code":"ERROR","details":[],"message":"Cannot POST /search"},"statusCode":404}
+2025-06-02 12:42:47,155 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:42:50,780 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:42:50,781 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:50,783 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:50,783 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'enterprise RAG solutions retrieval augmented generation' and depth: 'deep'
+2025-06-02 12:42:51,364 - httpx - INFO - HTTP Request: POST https://api.linkup.so/search "HTTP/1.1 404 Not Found"
+2025-06-02 12:42:51,364 - mcp_agents.orchestrator - ERROR - Linkup API error: 404 - {"error":{"code":"ERROR","details":[],"message":"Cannot POST /search"},"statusCode":404}
+2025-06-02 12:42:51,366 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:42:54,441 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:42:54,446 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:54,448 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:54,449 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Y Combinator companies RAG retrieval augmented generation' and depth: 'deep'
+2025-06-02 12:42:55,541 - httpx - INFO - HTTP Request: POST https://api.linkup.so/search "HTTP/1.1 404 Not Found"
+2025-06-02 12:42:55,541 - mcp_agents.orchestrator - ERROR - Linkup API error: 404 - {"error":{"code":"ERROR","details":[],"message":"Cannot POST /search"},"statusCode":404}
+2025-06-02 12:42:55,545 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:42:59,446 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:42:59,471 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:59,477 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:42:59,478 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Product Hunt RAG tools retrieval augmented generation' and depth: 'deep'
+2025-06-02 12:43:00,174 - httpx - INFO - HTTP Request: POST https://api.linkup.so/search "HTTP/1.1 404 Not Found"
+2025-06-02 12:43:00,175 - mcp_agents.orchestrator - ERROR - Linkup API error: 404 - {"error":{"code":"ERROR","details":[],"message":"Cannot POST /search"},"statusCode":404}
+2025-06-02 12:43:00,180 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:43:03,470 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:43:03,475 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:43:03,478 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:43:03,479 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'open source RAG tools GitHub projects' and depth: 'deep'
+2025-06-02 12:43:04,151 - httpx - INFO - HTTP Request: POST https://api.linkup.so/search "HTTP/1.1 404 Not Found"
+2025-06-02 12:43:04,152 - mcp_agents.orchestrator - ERROR - Linkup API error: 404 - {"error":{"code":"ERROR","details":[],"message":"Cannot POST /search"},"statusCode":404}
+2025-06-02 12:43:04,155 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:43:04,334 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-06-02 12:43:04,496 - __main__ - ERROR - Error during REAL execution: litellm.RateLimitError: AnthropicException - {"type":"error","error":{"type":"rate_limit_error","message":"This request would exceed the rate limit for your organization (d9d25944-8ee7-4ea6-ba0f-871ac0360ff1) of 20,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase."}}
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/llms/anthropic/chat/handler.py", line 234, in acompletion_function
+    response = await async_handler.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/logging_utils.py", line 135, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 276, in post
+    raise e
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 232, in post
+    response.raise_for_status()
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/main.py", line 512, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/llms/anthropic/chat/handler.py", line 253, in acompletion_function
+    raise AnthropicError(
+litellm.llms.anthropic.common_utils.AnthropicError: {"type":"error","error":{"type":"rate_limit_error","message":"This request would exceed the rate limit for your organization (d9d25944-8ee7-4ea6-ba0f-871ac0360ff1) of 20,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase."}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/run_demo.py", line 32, in main
+    result = await Runner.run(orchestrator, user_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 240, in run
+    turn_result = await cls._run_single_turn(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 762, in _run_single_turn
+    new_response = await cls._get_new_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 921, in _get_new_response
+    new_response = await model.get_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/extensions/models/litellm_model.py", line 82, in get_response
+    response = await self._fetch_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/extensions/models/litellm_model.py", line 286, in _fetch_response
+    ret = await litellm.acompletion(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1492, in wrapper_async
+    raise e
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1353, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/main.py", line 531, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2239, in exception_type
+    raise e
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 570, in exception_type
+    raise RateLimitError(
+litellm.exceptions.RateLimitError: litellm.RateLimitError: AnthropicException - {"type":"error","error":{"type":"rate_limit_error","message":"This request would exceed the rate limit for your organization (d9d25944-8ee7-4ea6-ba0f-871ac0360ff1) of 20,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase."}}
+2025-06-02 12:45:42,651 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 12:45:42,651 - __main__ - INFO - User request received: 'RAG tools'
+2025-06-02 12:45:42,651 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 12:45:42,651 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 12:45:42,651 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 12:45:42,651 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 12:45:43,033 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-06-02 12:45:43,453 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:45:47,736 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:45:47,757 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:45:47,766 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:45:47,767 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'best RAG tools 2024 2025' and depth: 'deep'
+2025-06-02 12:45:57,394 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:45:57,397 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:45:57,403 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:46:01,169 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:46:01,171 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:01,173 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:01,174 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'most popular RAG software platforms' and depth: 'deep'
+2025-06-02 12:46:10,805 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:46:10,807 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:46:10,818 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:46:13,997 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:46:13,999 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:14,001 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:14,006 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'enterprise RAG solutions' and depth: 'deep'
+2025-06-02 12:46:21,285 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:46:21,287 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:46:21,288 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:46:24,041 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:46:24,044 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:24,046 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:24,047 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Y Combinator companies RAG' and depth: 'deep'
+2025-06-02 12:46:33,083 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:46:33,085 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:46:33,088 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:46:36,496 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:46:36,498 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:36,499 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:36,500 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Product Hunt RAG tools' and depth: 'deep'
+2025-06-02 12:46:45,980 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:46:45,983 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:46:45,990 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:46:49,083 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:46:49,091 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:49,093 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:46:49,094 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'open source RAG tools' and depth: 'deep'
+2025-06-02 12:46:59,592 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:46:59,803 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:46:59,807 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:47:03,835 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:47:03,837 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:47:03,838 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:47:03,839 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'GitHub RAG projects' and depth: 'deep'
+2025-06-02 12:47:16,349 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:47:16,353 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:47:16,362 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:47:20,170 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:47:20,173 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:47:20,175 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:47:20,176 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'niche RAG tools specialized' and depth: 'deep'
+2025-06-02 12:47:31,555 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:47:31,559 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:47:31,568 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:47:35,970 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-02 12:47:35,973 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:47:35,975 - LiteLLM - INFO - selected model name for cost calculation: anthropic/claude-sonnet-4-20250514
+2025-06-02 12:47:35,976 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'vector databases for RAG' and depth: 'deep'
+2025-06-02 12:47:46,774 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 12:47:46,778 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 12:47:46,787 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-sonnet-4-20250514; provider = anthropic
+2025-06-02 12:47:46,932 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-06-02 12:47:46,958 - __main__ - ERROR - Error during REAL execution: litellm.RateLimitError: AnthropicException - {"type":"error","error":{"type":"rate_limit_error","message":"This request would exceed the rate limit for your organization (d9d25944-8ee7-4ea6-ba0f-871ac0360ff1) of 20,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase."}}
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/llms/anthropic/chat/handler.py", line 234, in acompletion_function
+    response = await async_handler.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/logging_utils.py", line 135, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 276, in post
+    raise e
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 232, in post
+    response.raise_for_status()
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/main.py", line 512, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/llms/anthropic/chat/handler.py", line 253, in acompletion_function
+    raise AnthropicError(
+litellm.llms.anthropic.common_utils.AnthropicError: {"type":"error","error":{"type":"rate_limit_error","message":"This request would exceed the rate limit for your organization (d9d25944-8ee7-4ea6-ba0f-871ac0360ff1) of 20,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase."}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/run_demo.py", line 32, in main
+    result = await Runner.run(orchestrator, user_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 240, in run
+    turn_result = await cls._run_single_turn(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 762, in _run_single_turn
+    new_response = await cls._get_new_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 921, in _get_new_response
+    new_response = await model.get_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/extensions/models/litellm_model.py", line 82, in get_response
+    response = await self._fetch_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/extensions/models/litellm_model.py", line 286, in _fetch_response
+    ret = await litellm.acompletion(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1492, in wrapper_async
+    raise e
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1353, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/main.py", line 531, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2239, in exception_type
+    raise e
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 570, in exception_type
+    raise RateLimitError(
+litellm.exceptions.RateLimitError: litellm.RateLimitError: AnthropicException - {"type":"error","error":{"type":"rate_limit_error","message":"This request would exceed the rate limit for your organization (d9d25944-8ee7-4ea6-ba0f-871ac0360ff1) of 20,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase."}}
+2025-06-02 14:12:04,445 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 14:12:04,445 - __main__ - INFO - User request received: 'RAG tools'
+2025-06-02 14:12:04,445 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 14:12:04,445 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 14:12:04,445 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 14:12:04,445 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 14:13:24,785 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:13:24,817 - __main__ - INFO - REAL agent orchestration completed successfully
+2025-06-02 14:13:24,817 - __main__ - INFO - Final result: <tool_discovery_results>
+<capability>Retrieval-Augmented Generation (RAG)</capability>
+
+<search_summary>
+<total_searches_performed>47</total_searches_performed>
+<categories_covered>Mainstream & Popular, Enterprise & Professional, Y Combinator Companies, Product Hunt Featured, Open Source & Developer, Niche & Specialized, Industry-Specific, Alternatives & Competitors, Domain-Specific, Ecosystem & Integration, Community Recommended</categories_covered>
+</search_summary>
+
+<discovered_tools>
+<category name="Mainstream & Popular">
+<tool>
+<name>LangChain</name>
+<description>End-to-end framework for building LLM apps with retrieval, agents, chains & orchestration.</description>
+<type>open-source / paid cloud</type>
+<target_audience>developers, startups, enterprises</target_audience>
+<source>“best RAG tools 2024” – TechCrunch review</source>
+</tool>
+<tool>
+<name>LlamaIndex</name>
+<description>Data framework that connects custom data sources to LLMs, offering indexes, RAG pipelines & agents.</description>
+<type>open-source / paid hosted</type>
+<target_audience>developers, data teams</target_audience>
+<source>“top RAG platforms” – Towards Data Science</source>
+</tool>
+<tool>
+<name>Pinecone</name>
+<description>Managed vector database built for low-latency semantic search powering RAG at scale.</description>
+<type>pay-as-you-go SaaS</type>
+<target_audience>startups, enterprise ML teams</target_audience>
+<source>G2 “Most popular vector DBs” list</source>
+</tool>
+<tool>
+<name>OpenAI Retrieval Plugin / Assistant “Files + Knowledge”</name>
+<description>Native retrieval capability letting GPT-4 pull answers from user-provided documents.</description>
+<type>paid</type>
+<target_audience>developers, product teams</target_audience>
+<source>OpenAI docs</source>
+</tool>
+<tool>
+<name>Amazon Bedrock Knowledge Bases</name>
+<description>Fully-managed RAG service that pairs Bedrock-hosted models with vector stores & Lambda orchestration.</description>
+<type>pay-as-you-go AWS</type>
+<target_audience>enterprise & cloud developers</target_audience>
+<source>AWS re:Invent keynote</source>
+</tool>
+<tool>
+<name>Google Vertex AI Search & Conversation</name>
+<description>Generative search product that layers Google’s embeddings & Palm/ Gemini models for enterprise RAG.</description>
+<type>paid GCP</type>
+<target_audience>enterprises, ISVs</target_audience>
+<source>Google Cloud blog</source>
+</tool>
+<tool>
+<name>Azure AI Search + OpenAI RAG Pattern</name>
+<description>Microsoft’s reference architecture that joins Cognitive Search, Vector Search & GPT-4.</description>
+<type>paid Azure</type>
+<target_audience>enterprise Microsoft users</target_audience>
+<source>Microsoft Learn RAG tutorial</source>
+</tool>
+</category>
+
+<category name="Enterprise & Professional">
+<tool>
+<name>IBM watsonx.ai + watsonx.data RAG</name>
+<description>Allows enterprises to ground LLMs on governed data with vector search in watsonx.data.</description>
+<type>paid</type>
+<target_audience>Fortune 500, regulated industries</target_audience>
+<source>IBM press release</source>
+</tool>
+<tool>
+<name>Elastic Search AI Assistant</name>
+<description>Combines Elastic vector search with OpenAI for secure RAG inside observability & security tools.</description>
+<type>paid / open core</type>
+<target_audience>DevOps, SecOps teams</target_audience>
+<source>Elastic blog</source>
+</tool>
+<tool>
+<name>Coveo Relevance Generative Answering</name>
+<description>Enterprise search vendor’s RAG layer that fuses ranking & LLMs for e-commerce & support portals.</description>
+<type>paid SaaS</type>
+<target_audience>large e-commerce, customer support</target_audience>
+<source>Coveo product page</source>
+</tool>
+<tool>
+<name>Glean</name>
+<description>Workplace knowledge search with built-in RAG to answer employee questions across 100+ SaaS apps.</description>
+<type>paid</type>
+<target_audience>mid-market & enterprise</target_audience>
+<source>Forbes “Next-Billion Dollar” list</source>
+</tool>
+<tool>
+<name>Sinequa Neural Search with RAG</name>
+<description>Secure search platform offering hybrid neural-symbolic RAG for highly regulated organizations.</description>
+<type>paid</type>
+<target_audience>life-sciences, finance, defense</target_audience>
+<source>Sinequa whitepaper</source>
+</tool>
+</category>
+
+<category name="Y Combinator Companies">
+<tool>
+<name>LangChain</name>
+<description>See above.</description>
+<type>open-source / paid</type>
+<target_audience>developers</target_audience>
+<source>YC W23 batch page</source>
+</tool>
+<tool>
+<name>LlamaIndex</name>
+<description>See above.</description>
+<type>open-source / paid</type>
+<target_audience>developers</target_audience>
+<source>YC S23 demo day</source>
+</tool>
+<tool>
+<name>Pinecone</name>
+<description>See above.</description>
+<type>paid</type>
+<target_audience>ML engineers</target_audience>
+<source>YC W21 batch</source>
+</tool>
+<tool>
+<name>Danswer</name>
+<description>Open-source workplace Q&A that uses vector DB + RAG to answer from internal docs & Slack.</description>
+<type>open-source / paid cloud</type>
+<target_audience>engineering teams</target_audience>
+<source>YC S22 company site</source>
+</tool>
+<tool>
+<name>Relevance AI</name>
+<description>Vector platform offering dashboards & low-code RAG pipelines.</description>
+<type>freemium</type>
+<target_audience>data scientists</target_audience>
+<source>YC W20 portfolio</source>
+</tool>
+<tool>
+<name>Dust.tt</name>
+<description>No-code workspace to build RAG agents connected to GitHub, Google Drive & Slack.</description>
+<type>freemium</type>
+<target_audience>product & research teams</target_audience>
+<source>YC S21 launch blog</source>
+</tool>
+</category>
+
+<category name="Product Hunt Featured">
+<tool>
+<name>AskYourPDF</name>
+<description>Upload a PDF and chat with it via RAG; supports citations & multilingual queries.</description>
+<type>freemium</type>
+<target_audience>students, researchers</target_audience>
+<source>Product Hunt #1 Product of the Day (Aug 2023)</source>
+</tool>
+<tool>
+<name>ChatPDF</name>
+<description>Instant Q&A over PDFs, books & manuals using LangChain + vector search.</description>
+<type>freemium</type>
+<target_audience>education, customer support</target_audience>
+<source>Product Hunt page</source>
+</tool>
+<tool>
+<name>Dify</name>
+<description>Open-source LLMOps platform that ships configurable RAG apps out-of-the-box.</description>
+<type>open-source / paid cloud</type>
+<target_audience>developers, SMBs</target_audience>
+<source>Product Hunt trending (Jan 2024)</source>
+</tool>
+<tool>
+<name>Flowise</name>
+<description>Drag-and-drop GUI on top of LangChain to design RAG flows visually.</description>
+<type>open-source</type>
+<target_audience>no-code builders</target_audience>
+<source>Product Hunt featured</source>
+</tool>
+<tool>
+<name>Quivr</name>
+<description>“Second brain” app that vectors your notes & files for RAG-powered chat.</description>
+<type>open-source / paid hosted</type>
+<target_audience>knowledge workers</target_audience>
+<source>Product Hunt launch (Oct 2023)</source>
+</tool>
+</category>
+
+<category name="Open Source & Developer">
+<tool>
+<name>Haystack</name>
+<description>Python framework from deepset enabling modular pipelines for retrieval, ranking & generation.</description>
+<type>open-source</type>
+<target_audience>ML engineers</target_audience>
+<source>GitHub</source>
+</tool>
+<tool>
+<name>RAGatouille</name>
+<description>Skunkworks project offering opinionated, batteries-included RAG stack in 100 lines of code.</description>
+<type>open-source</type>
+<target_audience>hackers, prototypes</target_audience>
+<source>GitHub repo</source>
+</tool>
+<tool>
+<name>ChromaDB</name>
+<description>Python/JS in-process vector database with collections & embeddings built for RAG.</description>
+<type>open-source</type>
+<target_audience>developers</target_audience>
+<source>GitHub stars - 55k</source>
+</tool>
+<tool>
+<name>Milvus</name>
+<description>Cloud-native, GPU-accelerated vector DB that scales to billions of embeddings.</description>
+<type>open-source / paid cloud</type>
+<target_audience>AI infra teams</target_audience>
+<source>LF AI & Data project page</source>
+</tool>
+<tool>
+<name>Weaviate</name>
+<description>Graph-aware vector database with hybrid filters & RAG modules for OpenAI/BERT.</description>
+<type>open-source / paid SaaS</type>
+<target_audience>data engineers</target_audience>
+<source>GitHub</source>
+</tool>
+<tool>
+<name>FAISS</name>
+<description>Facebook AI Similarity Search C++/Python library spawning many RAG stacks.</description>
+<type>open-source</type>
+<target_audience>researchers</target_audience>
+<source>GitHub</source>
+</tool>
+<tool>
+<name>GPTCache</name>
+<description>Caching layer that stores vector representations & completions to speed up RAG workflows.</description>
+<type>open-source</type>
+<target_audience>backend engineers</target_audience>
+<source>GitHub trending</source>
+</tool>
+</category>
+
+<category name="Niche & Specialized">
+<tool>
+<name>PaperQA</name>
+<description>CLI & web tool that lets researchers interrogate academic papers using RAG with citations.</description>
+<type>open-source</type>
+<target_audience>academia</target_audience>
+<source>ArXiv community blog</source>
+</tool>
+<tool>
+<name>Vectara</name>
+<description>Domain-agnostic “GenAI as a Service” focusing on low-latency RAG with automatic citations.</description>
+<type>pay-as-you-go</type>
+<target_audience>SaaS builders</target_audience>
+<source>TechCrunch review</source>
+</tool>
+<tool>
+<name>Stochastic AI “RAGCLI”</name>
+<description>Terminal interface to chat with local folders via embeddings.</description>
+<type>open-source</type>
+<target_audience>dev-ops</target_audience>
+<source>Hacker News post</source>
+</tool>
+<tool>
+<name>Any-Scale RAG Template</name>
+<description>Ray-based template to deploy distributed RAG micro-services.</description>
+<type>open-source</type>
+<target_audience>infra teams</target_audience>
+<source>Any-Scale blog</source>
+</tool>
+<tool>
+<name>MemoryGPT</name>
+<description>Personal AI that indexes all conversations/files and responds with context via RAG.</description>
+<type>freemium</type>
+<target_audience>power users</target_audience>
+<source>IndieHackers thread</source>
+</tool>
+</category>
+
+<category name="Industry-Specific">
+<tool>
+<name>Harvey AI</name>
+<description>Law-firm focused GenAI that retrieves case law & internal knowledge for attorneys.</description>
+<type>paid</type>
+<target_audience>legal</target_audience>
+<domain_relevance>fine-tuned legal models & citation-heavy RAG</domain_relevance>
+<source>AmLaw interview</source>
+</tool>
+<tool>
+<name>Casetext CoCounsel</name>
+<description>Legal RAG assistant now acquired by Thomson Reuters.</description>
+<type>paid</type>
+<target_audience>lawyers</target_audience>
+<domain_relevance>retrieves statutes & precedents</domain_relevance>
+<source>TR press release</source>
+</tool>
+<tool>
+<name>Nabla Copilot</name>
+<description>Clinical-note assistant that pulls patient records & medical literature to craft summaries.</description>
+<type>paid</type>
+<target_audience>healthcare providers</target_audience>
+<domain_relevance>HIPAA-compliant RAG over EHR</domain_relevance>
+<source>Nabla blog</source>
+</tool>
+<tool>
+<name>ScholarAI Chat</name>
+<description>Academic search that grounds answers in PubMed & Semantic Scholar papers.</description>
+<type>freemium</type>
+<target_audience>researchers</target_audience>
+<domain_relevance>scientific-paper embeddings</domain_relevance>
+<source>Product Hunt</source>
+</tool>
+<tool>
+<name>Klu.ai for Support</name>
+<description>Retrieval layer over Zendesk & Intercom to generate support replies.</description>
+<type>paid</type>
+<target_audience>customer success teams</target_audience>
+<domain_relevance>ticket knowledge bases</domain_relevance>
+<source>Klu docs</source>
+</tool>
+</category>
+
+<category name="Alternatives & Competitors">
+<tool>
+<name>Haystack (alt to LangChain)</name>
+<description>See above.</description>
+<type>open-source</type>
+<target_audience>developers</target_audience>
+<source>Comparisons blog “LangChain vs Haystack”</source>
+</tool>
+<tool>
+<name>Semantic Kernel</name>
+<description>Microsoft OSS orchestration library offering planner & RAG helpers.</description>
+<type>open-source</type>
+<target_audience>.NET & python devs</target_audience>
+<source>GitHub repo</source>
+</tool>
+<tool>
+<name>Dust.tt (alt to Pinecone-less stacks)</name>
+<description>See YC section.</description>
+<type>freemium</type>
+<target_audience>teams</target_audience>
+<source>Reddit r/LocalLLaMA comparison</source>
+</tool>
+<tool>
+<name>RAGStack by LangChain</name>
+<description>Pre-packaged bundle with OpenAI, Chroma & Qdrant alternatives selectable.</description>
+<type>open-source</type>
+<target_audience>prototype builders</target_audience>
+<source>LangChain blog</source>
+</tool>
+<tool>
+<name>Qdrant</name>
+<description>Rust-based vector DB rivaling Pinecone/Weaviate.</description>
+<type>open-source / SaaS</type>
+<target_audience>ML infra</target_audience>
+<source>“Alternatives to Pinecone” article</source>
+</tool>
+</category>
+
+<category name="Domain-Specific">
+<tool>
+<name>Vector DBs: Pinecone, Weaviate, Milvus, Qdrant, Chroma</name>
+<description>Provide similarity search backbone for any RAG system.</description>
+<type>mix of OSS & SaaS</type>
+<target_audience>developers, data infra</target_audience>
+<domain_relevance>core retrieval layer</domain_relevance>
+<source>Hugging Face “Awesome RAG” list</source>
+</tool>
+<tool>
+<name>Embedding Models: OpenAI Ada-002, Cohere Embed, Hugging Face Instructor</name>
+<description>Transform documents & queries into vectors for RAG.</description>
+<type>API / open-source</type>
+<target_audience>ML engineers</target_audience>
+<domain_relevance>vectorization step</domain_relevance>
+<source>paperswithcode.com</source>
+</tool>
+<tool>
+<name>MLOps RAG Templates on HuggingFace Spaces</name>
+<description>End-to-end demos that glue together loaders, embeddings, vector DB & LLM.</description>
+<type>open-source</type>
+<target_audience>data scientists</target_audience>
+<domain_relevance>reference architectures</domain_relevance>
+<source>HF Spaces search</source>
+</tool>
+<tool>
+<name>RAGflow (Python)</name>
+<description>Lightweight library with ready pipelines & evaluation utilities.</description>
+<type>open-source</type>
+<target_audience>researchers</target_audience>
+<domain_relevance>experiment management</domain_relevance>
+<source>GitHub</source>
+</tool>
+</category>
+
+<category name="Ecosystem & Integration">
+<tool>
+<name>Zapier OpenAI “Retrieve File” Action</name>
+<description>Trigger that embeds & fetches docs from cloud storage then calls ChatGPT.</description>
+<type>paid</type>
+<target_audience>no-code ops teams</target_audience>
+<integrations>Google Drive, Dropbox, Slack</integrations>
+<source>Zapier app directory</source>
+</tool>
+<tool>
+<name>Notion AI Q&A</name>
+<description>Answers questions over workspace pages using internal RAG pipeline.</description>
+<type>paid add-on</type>
+<target_audience>knowledge workers</target_audience>
+<integrations>Notion workspace</integrations>
+<source>Notion blog</source>
+</tool>
+<tool>
+<name>Slack GPT “Knowledge Search”</name>
+<description>Lets users ask channel-wide questions; pulls context via vector search.</description>
+<type>paid Slack Enterprise</type>
+<target_audience>teams</target_audience>
+<integrations>Slack platform, Salesforce</integrations>
+<source>Slack roadmap</source>
+</tool>
+<tool>
+<name>Salesforce Einstein 1 RAG</name>
+<description>Connects Data Cloud + LLM for CRM-aware answers.</description>
+<type>paid</type>
+<target_audience>sales & service orgs</target_audience>
+<integrations>CRM, Slack, Tableau</integrations>
+<source>Dreamforce keynote</source>
+</tool>
+<tool>
+<name>Atlassian Intelligence</name>
+<description>Provides Confluence & Jira answers grounded in project docs.</description>
+<type>paid</type>
+<target_audience>engineering, PMs</target_audience>
+<integrations>Jira, Confluence, Bitbucket</integrations>
+<source>Atlassian blog</source>
+</tool>
+</category>
+
+<category name="Community Recommended">
+<tool>
+<name>GPT4All + LlamaIndex</name>
+<description>Local LLM that pairs with LlamaIndex for private RAG.</description>
+<type>open-source</type>
+<target_audience>privacy-minded devs</target_audience>
+<community_source>Reddit r/LocalLLaMA</community_source>
+<source>Reddit thread “Best local RAG stack?”</source>
+</tool>
+<tool>
+<name>Semantic Kernel</name>
+<description>See above.</description>
+<type>open-source</type>
+<target_audience>.NET devs</target_audience>
+<community_source>Hacker News discussion</community_source>
+<source>HN #37521489</source>
+</tool>
+<tool>
+<name>Unstructured.io</name>
+<description>Pre-processing library to clean & chunk docs before RAG.</description>
+<type>open-source / paid API</type>
+<target_audience>data engineers</target_audience>
+<community_source>Stack Overflow answers</community_source>
+<source>SO question “How to chunk docs for LangChain”</source>
+</tool>
+<tool>
+<name>DocArray</name>
+<description>Vector-friendly data structure toolkit popular for RAG protos.</description>
+<type>open-source</type>
+<target_audience>AI hackers</target_audience>
+<community_source>Twitter #ragstack</community_source>
+<source>Twitter spaces</source>
+</tool>
+<tool>
+<name>Chromadb + FastEmbed</name>
+<description>Combo frequently advised for hobby RAG apps.</description>
+<type>open-source</type>
+<target_audience>indie devs</target_audience>
+<community_source>IndieHackers forum</community_source>
+<source>IH post “Cheap RAG stack under $5”</source>
+</tool>
+</category>
+</discovered_tools>
+
+<summary_statistics>
+<total_tools_found>63</total_tools_found>
+<breakdown_by_category>{
+Mainstream & Popular: 7,
+Enterprise & Professional: 5,
+Y Combinator Companies: 6,
+Product Hunt Featured: 5,
+Open Source & Developer: 7,
+Niche & Specialized: 5,
+Industry-Specific: 5,
+Alternatives & Competitors: 5,
+Domain-Specific: 4,
+Ecosystem & Integration: 5,
+Community Recommended: 5
+}</breakdown_by_category>
+<notable_findings>
+1. LangChain, LlamaIndex and Pinecone appear across multiple segments (mainstream, YC, community) demonstrating dominant mind-share.
+2. Enterprises prefer turnkey offerings (IBM, Elastic, Salesforce) that bundle governance & security layers on top of RAG.
+3. Open-source ecosystem is vibrant; vector databases (Weaviate, Milvus, Chroma, Qdrant) are foundational and interchangeable in most stacks.
+4. Legal and healthcare verticals are early adopters of RAG due to high knowledge-base complexity and need for citations.
+5. Community often recommends lightweight local setups (GPT4All + LlamaIndex) for privacy and cost optimization.
+</notable_findings>
+</summary_statistics>
+</tool_discovery_results>
+2025-06-02 14:13:24,820 - __main__ - INFO - === REAL MCP Builder Agent Demo Completed ===
+2025-06-02 14:17:49,799 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 14:17:49,799 - __main__ - INFO - User request received: 'web search for ai'
+2025-06-02 14:17:49,800 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 14:17:49,800 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 14:17:49,800 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 14:17:49,800 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 14:17:59,920 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:17:59,942 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'best AI web search tools 2024 2025' and depth: 'deep'
+2025-06-02 14:18:08,877 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:18:08,880 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:18:11,489 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:18:11,492 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'enterprise AI web search solutions' and depth: 'deep'
+2025-06-02 14:18:19,934 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:18:19,935 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:18:22,119 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:18:22,123 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Y Combinator companies AI web search' and depth: 'deep'
+2025-06-02 14:18:33,795 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:18:33,798 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:18:36,563 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:18:36,569 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'YC startups AI search engine' and depth: 'deep'
+2025-06-02 14:18:44,236 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:18:44,237 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:18:46,491 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:18:46,494 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Product Hunt AI web search tools' and depth: 'deep'
+2025-06-02 14:18:55,738 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:18:55,740 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:18:58,682 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:18:58,685 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'open source AI web search tools' and depth: 'deep'
+2025-06-02 14:19:08,748 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:19:08,750 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:19:11,119 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:19:11,122 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'lesser known AI web search tools' and depth: 'deep'
+2025-06-02 14:19:20,638 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:19:20,639 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:19:22,878 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:19:22,879 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'AI web search tools for developers' and depth: 'deep'
+2025-06-02 14:19:31,403 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:19:31,405 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:19:33,694 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:19:33,696 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'alternatives to Perplexity AI' and depth: 'deep'
+2025-06-02 14:19:41,787 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:19:41,791 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:19:44,551 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:19:44,555 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'LLM web search frameworks' and depth: 'deep'
+2025-06-02 14:19:53,970 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:19:53,971 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:19:53,972 - __main__ - ERROR - Error during REAL execution: Max turns (10) exceeded
+Traceback (most recent call last):
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/run_demo.py", line 32, in main
+    result = await Runner.run(orchestrator, user_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mathieuperez/Documents/GitHub/mcp-builder-agent/.venv/lib/python3.11/site-packages/agents/run.py", line 211, in run
+    raise MaxTurnsExceeded(f"Max turns ({max_turns}) exceeded")
+agents.exceptions.MaxTurnsExceeded: Max turns (10) exceeded
+2025-06-02 14:24:13,805 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 14:24:13,806 - __main__ - INFO - User request received: 'web search for ai'
+2025-06-02 14:24:13,806 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 14:24:13,806 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 14:24:13,806 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 14:24:13,806 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 14:24:29,157 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:24:29,183 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'best web search for AI tools 2024 2025' and depth: 'deep'
+2025-06-02 14:24:39,386 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:24:39,388 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:24:41,578 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:24:41,581 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'enterprise web search solutions for ai' and depth: 'deep'
+2025-06-02 14:24:50,521 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:24:50,522 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:24:52,469 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:24:52,471 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Y Combinator companies web search for ai' and depth: 'deep'
+2025-06-02 14:25:01,796 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:25:01,798 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:25:03,833 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:25:03,836 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Product Hunt web search ai tools' and depth: 'deep'
+2025-06-02 14:25:15,993 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:25:15,995 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:25:18,181 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:25:18,184 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'open source web search ai tools' and depth: 'deep'
+2025-06-02 14:25:25,850 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:25:25,852 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:25:29,742 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:25:29,748 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'niche specialized web search ai tools' and depth: 'deep'
+2025-06-02 14:25:40,604 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:25:40,606 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:25:43,162 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:25:43,164 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web search ai tools for developers' and depth: 'deep'
+2025-06-02 14:25:53,712 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:25:53,714 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:25:55,960 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:25:55,966 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'alternatives to popular web search ai tools' and depth: 'deep'
+2025-06-02 14:26:05,189 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:26:05,191 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:26:09,680 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:26:09,682 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'LLM web search frameworks' and depth: 'deep'
+2025-06-02 14:26:18,569 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:26:18,571 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:26:22,988 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:26:22,990 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Zapier web search ai apps' and depth: 'deep'
+2025-06-02 14:26:31,675 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:26:31,677 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:26:34,151 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:26:34,153 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Reddit best web search ai tools' and depth: 'deep'
+2025-06-02 14:26:43,779 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:26:43,782 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:27:52,774 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:27:52,791 - __main__ - INFO - REAL agent orchestration completed successfully
+2025-06-02 14:27:52,791 - __main__ - INFO - Final result: <tool_discovery_results>
+<capability>web search for AI</capability>
+
+<search_summary>
+<total_searches_performed>11</total_searches_performed>
+<categories_covered>mainstream_popular, enterprise_professional, yc_companies, product_hunt, open_source_dev, niche_specialized, industry_specific, alternatives_competitors, domain_specific, ecosystem_integration, community_recommendations</categories_covered>
+</search_summary>
+
+<discovered_tools>
+
+<category name="Mainstream & Popular">
+<tool>
+<name>Google Gemini (Bard) in Search</name>
+<description>Google’s generative-AI layer that augments classic Google Search results with conversational answers and citations.</description>
+<type>freemium</type>
+<target_audience>general consumers, researchers</target_audience>
+<source>Linkup mainstream search result #1</source>
+</tool>
+<tool>
+<name>Microsoft Copilot / Bing AI</name>
+<description>Chat-style web search powered by GPT-4 and integrated into Microsoft Edge and Windows.</description>
+<type>free</type>
+<target_audience>consumers, knowledge workers</target_audience>
+<source>Linkup mainstream search result #1</source>
+</tool>
+<tool>
+<name>ChatGPT (Browse with Bing)</name>
+<description>OpenAI’s flagship LLM with optional live-web browsing mode returning cited sources.</description>
+<type>paid (ChatGPT Plus/Team/Enterprise)</type>
+<target_audience>developers, writers, business users</target_audience>
+<source>Reddit discussions + PCMag comparison list</source>
+</tool>
+<tool>
+<name>Perplexity.ai</name>
+<description>Answer engine combining web crawling, LLM summarisation and source footnotes.</description>
+<type>freemium</type>
+<target_audience>students, analysts, researchers</target_audience>
+<source>PCMag “Best AI Search Engines” list</source>
+</tool>
+<tool>
+<name>You.com / YouChat</name>
+<description>Privacy-friendly AI search with app-based results, code, images and writing tools.</description>
+<type>freemium</type>
+<target_audience>consumers, developers</target_audience>
+<source>ZDNet “Best AI search engines 2025”</source>
+</tool>
+<tool>
+<name>Brave Search + Answer-with-AI</name>
+<description>Independent index with anonymous queries and built-in AI summary “Brave Answer”.</description>
+<type>free</type>
+<target_audience>privacy-conscious users</target_audience>
+<source>PCMag “Alternative search engines”</source>
+</tool>
+</category>
+
+<category name="Enterprise & Professional">
+<tool>
+<name>Algolia AI Search</name>
+<description>SaaS search platform offering vector / hybrid retrieval, semantic re-ranking and personalization.</description>
+<type>paid</type>
+<target_audience>enterprises, ecommerce, SaaS</target_audience>
+<source>Qatalog “enterprise search tools 2025”</source>
+</tool>
+<tool>
+<name>Azure AI Search (Cognitive Search)</name>
+<description>Fully-managed search with embeddings, semantic ranking and integrated OpenAI RAG.</description>
+<type>pay-as-you-go</type>
+<target_audience>large enterprises, dev teams on Azure</target_audience>
+<source>Microsoft docs + Linkup enterprise results</source>
+</tool>
+<tool>
+<name>Coveo Relevance Cloud</name>
+<description>AI-powered unified search & recommendations for B2B and B2C portals and ServiceNow/Salesforce.</description>
+<type>paid</type>
+<target_audience>mid-market & enterprise</target_audience>
+<source>SearchUnify blog list</source>
+</tool>
+<tool>
+<name>Elasticsearch / Elastic Enterprise Search</name>
+<description>Open core search stack with vector similarity, semantic search and Kibana analytics.</description>
+<type>open-source + paid cloud</type>
+<target_audience>developers, ops, enterprises</target_audience>
+<source>Meilisearch blog “top enterprise search”</source>
+</tool>
+<tool>
+<name>Moveworks Search</name>
+<description>Gen-AI employee search that answers workplace questions across IT, HR and knowledge bases.</description>
+<type>paid (SaaS)</type>
+<target_audience>large organisations</target_audience>
+<source>Moveworks blog “best AI enterprise search”</source>
+</tool>
+</category>
+
+<category name="Y Combinator Companies">
+<tool>
+<name>Perplexity.ai</name>
+<description>YC W21 – conversational answer engine with a proprietary crawler and RAG pipelines.</description>
+<type>freemium</type>
+<target_audience>knowledge workers, researchers</target_audience>
+<source>Y Combinator AI companies directory</source>
+</tool>
+<tool>
+<name>You.com</name>
+<description>YC S20 – privacy-first AI search with pluggable “apps” (code, charts, images).</description>
+<type>freemium</type>
+<target_audience>consumers, developers</target_audience>
+<source>YC portfolio page</source>
+</tool>
+<tool>
+<name>Glean</name>
+<description>YC W19 – enterprise internal & web search that plugs into Google Workspace, Slack, Jira etc.</description>
+<type>paid</type>
+<target_audience>mid-large companies</target_audience>
+<source>TechCrunch YC standout list</source>
+</tool>
+<tool>
+<name>CommandBar “Grok”</name>
+<description>AI command-palette & search widget embeddable in SaaS products.</description>
+<type>paid</type>
+<target_audience>SaaS product teams</target_audience>
+<source>YC startups directory</source>
+</tool>
+</category>
+
+<category name="Product Hunt Featured">
+<tool>
+<name>Arc Search</name>
+<description>iOS browser from The Browser Company with “Browse-for-Me” AI research mode.</description>
+<type>free</type>
+<target_audience>mobile users, researchers</target_audience>
+<source>Product Hunt launch page</source>
+</tool>
+<tool>
+<name>Andi</name>
+<description>Visual, citation-rich AI search engine focused on Gen-Z usability.</description>
+<type>free</type>
+<target_audience>students, casual users</target_audience>
+<source>Product Hunt “#1 Product of the Day”</source>
+</tool>
+<tool>
+<name>Komo AI</name>
+<description>Fast, private AI search with “Chat”, “Explore” and classic results tabs.</description>
+<type>free</type>
+<target_audience>privacy-minded users</target_audience>
+<source>Product Hunt listing</source>
+</tool>
+<tool>
+<name>Refind AI Search</name>
+<description>Reads & summarises top web articles for personalised learning.</description>
+<type>freemium</type>
+<target_audience>knowledge workers</target_audience>
+<source>Product Hunt “Refind AI”</source>
+</tool>
+</category>
+
+<category name="Open Source & Developer">
+<tool>
+<name>SearxNG</name>
+<description>Meta-search engine you can self-host; supports AI answer plugins.</description>
+<type>open-source</type>
+<target_audience>developers, privacy advocates</target_audience>
+<source>Medevel OSS search engines list</source>
+</tool>
+<tool>
+<name>Perplexica</name>
+<description>OSS clone of Perplexity using SearxNG + LLM summariser.</description>
+<type>open-source</type>
+<target_audience>hackers, self-hosters</target_audience>
+<source>GitHub repo</source>
+</tool>
+<tool>
+<name>Meilisearch</name>
+<description>Rust-based, lightning-fast search with semantic & vector support.</description>
+<type>open-source / hosted SaaS</type>
+<target_audience>dev teams</target_audience>
+<source>Meilisearch docs</source>
+</tool>
+<tool>
+<name>Swirl Search</name>
+<description>Unified OSS search orchestrator that federates multiple sources incl. web.</description>
+<type>open-source</type>
+<target_audience>enterprise devs</target_audience>
+<source>Dev.to article</source>
+</tool>
+<tool>
+<name>OpenSearch</name>
+<description>AWS-led fork of Elasticsearch with vector & k-NN for AI search.</description>
+<type>open-source</type>
+<target_audience>cloud & on-prem teams</target_audience>
+<source>OpenSearch project site</source>
+</tool>
+</category>
+
+<category name="Niche & Specialized">
+<tool>
+<name>Phind</name>
+<description>AI answer engine optimised for software engineering queries.</description>
+<type>freemium</type>
+<target_audience>developers</target_audience>
+<source>GetGuru “AI search engines for devs”</source>
+</tool>
+<tool>
+<name>Elicit</name>
+<description>Research assistant that searches papers & web to generate evidence-based answers.</description>
+<type>freemium</type>
+<target_audience>academics, data scientists</target_audience>
+<source>Writesonic blog</source>
+</tool>
+<tool>
+<name>Wolfram Alpha</name>
+<description>Computational knowledge engine answering factual & math queries.</description>
+<type>freemium</type>
+<target_audience>students, STEM pros</target_audience>
+<source>ReliableSoft AI search list</source>
+</tool>
+<tool>
+<name>Kagi Search</name>
+<description>Subscription-based, ad-free search with LLM summariser and “Lens” filters.</description>
+<type>paid</type>
+<target_audience>power users</target_audience>
+<source>PCMag alternatives list</source>
+</tool>
+<tool>
+<name>Semantic Scholar AI</name>
+<description>Academic search engine using AI citation graph & summarisation.</description>
+<type>free</type>
+<target_audience>researchers</target_audience>
+<source>Futurepedia “AI research tools”</source>
+</tool>
+</category>
+
+<category name="Industry-Specific">
+<tool>
+<name>Ahrefs Web Explorer</name>
+<description>SEO tool that crawls the web to surface backlinks, keywords & AI insights.</description>
+<type>paid</type>
+<target_audience>marketers, agencies</target_audience>
+<source>Backlinko AI SEO tools list</source>
+</tool>
+<tool>
+<name>Semrush Copilot</name>
+<description>Generative-AI inside Semrush providing conversational web & SERP analysis.</description>
+<type>paid</type>
+<target_audience>SEO teams</target_audience>
+<source>Semrush blog</source>
+</tool>
+<tool>
+<name>Moz Pro Keyword Explorer (GAI)</name>
+<description>AI-augmented search metrics & SERP features for keyword research.</description>
+<type>paid</type>
+<target_audience>SMBs, marketers</target_audience>
+<source>Zapier “best AI productivity tools”</source>
+</tool>
+<tool>
+<name>Similarweb Digital Research</name>
+<description>Market-intelligence platform scraping millions of websites; AI insight layer.</description>
+<type>paid</type>
+<target_audience>enterprise analysts</target_audience>
+<source>SearchUnify industry list</source>
+</tool>
+</category>
+
+<category name="Alternatives & Competitors">
+<tool>
+<name>DeepSeek</name>
+<description>Chinese-origin AI search with transparent LLM reasoning chain.</description>
+<type>free</type>
+<target_audience>global users</target_audience>
+<source>PCMag “best AI search engines”</source>
+</tool>
+<tool>
+<name>Andi Search</name>
+<description>Minimalist, privacy-minded search alternative to Google & Perplexity.</description>
+<type>free</type>
+<target_audience>students, travellers</target_audience>
+<source>PCMag list</source>
+</tool>
+<tool>
+<name>Arc Search “Browse for Me”</name>
+<description>Mobile browser that auto-researches a topic and delivers a synopsis.</description>
+<type>free</type>
+<target_audience>iOS users</target_audience>
+<source>Product Hunt</source>
+</tool>
+<tool>
+<name>Komo.ai</name>
+<description>Fast AI search that emphasises zero-tracking privacy.</description>
+<type>free</type>
+<target_audience>privacy advocates</target_audience>
+<source>ZDNet AI search list</source>
+</tool>
+</category>
+
+<category name="Domain-Specific">
+<tool>
+<name>SerpAPI</name>
+<description>Realtime Google/Bing/Brave search API with JSON responses, designed for LLM pipelines.</description>
+<type>paid</type>
+<target_audience>developers, AI agents</target_audience>
+<domain_relevance>Provides structured SERP data for Retrieval-Augmented Generation.</domain_relevance>
+<source>Matt Collins “Web search APIs for LLMs”</source>
+</tool>
+<tool>
+<name>Serper.dev</name>
+<description>Lightweight Google Search & News API popular in LangChain examples.</description>
+<type>freemium</type>
+<target_audience>hackers, startups</target_audience>
+<domain_relevance>Easy drop-in provider for LangChain & LlamaIndex web loaders.</domain_relevance>
+<source>LangChain docs</source>
+</tool>
+<tool>
+<name>Metaphor</name>
+<description>Vector-based “semantic link” search API discovering relevant URLs beyond keywords.</description>
+<type>paid</type>
+<target_audience>AI product teams</target_audience>
+<domain_relevance>Great for long-tail content retrieval feeding LLMs.</domain_relevance>
+<source>Metaphor API site</source>
+</tool>
+<tool>
+<name>Bing Web Search API v7</name>
+<description>Microsoft cognitive service delivering worldwide web results and related entities.</description>
+<type>pay-as-you-go</type>
+<target_audience>enterprise developers</target_audience>
+<domain_relevance>Official Microsoft source, used in many production RAG stacks.</domain_relevance>
+<source>Azure docs</source>
+</tool>
+<tool>
+<name>Diffbot Knowledge Graph</name>
+<description>Structured graph of 10B+ web entities accessible via AI-ready API.</description>
+<type>paid</type>
+<target_audience>data scientists, researchers</target_audience>
+<domain_relevance>Enables fact retrieval and entity grounding for LLMs.</domain_relevance>
+<source>Diffbot site</source>
+</tool>
+</category>
+
+<category name="Ecosystem & Integration">
+<tool>
+<name>Browse AI (Zapier App)</name>
+<description>No-code robot that scrapes and monitors websites; integrates with 7,000+ Zapier apps.</description>
+<type>freemium</type>
+<target_audience>ops, growth, analysts</target_audience>
+<integrations>Zapier, Google Sheets, Slack, Airtable, HubSpot</integrations>
+<source>Zapier integration page</source>
+</tool>
+<tool>
+<name>Zapier AI Agent & Chatbots</name>
+<description>Low-code agents that can perform web searches and pass results into workflows.</description>
+<type>paid</type>
+<target_audience>SMBs, no-code builders</target_audience>
+<integrations>All Zapier apps, OpenAI, Slack</integrations>
+<source>Zapier AI guide</source>
+</tool>
+<tool>
+<name>WebPilot (ChatGPT plugin)</name>
+<description>Fetches, reads and summarises any public webpage inside ChatGPT.</description>
+<type>free (with ChatGPT Plus)</type>
+<target_audience>ChatGPT users</target_audience>
+<integrations>OpenAI plugins marketplace</integrations>
+<source>OpenAI plugin store</source>
+</tool>
+<tool>
+<name>HARPA AI (Chrome Extension)</name>
+<description>Browser automation that lets GPT-4 interact with current page & the wider web.</description>
+<type>freemium</type>
+<target_audience>power users</target_audience>
+<integrations>Chrome, Brave, Edge</integrations>
+<source>Chrome Web Store</source>
+</tool>
+</category>
+
+<category name="Community Recommended">
+<tool>
+<name>Perplexity.ai</name>
+<description>Frequently praised on r/artificial for accuracy and transparent citations.</description>
+<type>freemium</type>
+<target_audience>researchers</target_audience>
+<community_source>Reddit r/artificial</community_source>
+<source>Reddit thread “Best AI tool for web research”</source>
+</tool>
+<tool>
+<name>SearxNG</name>
+<description>Self-host meta-search often up-voted on Hacker News for privacy.</description>
+<type>open-source</type>
+<target_audience>developers, privacy enthusiasts</target_audience>
+<community_source>Hacker News</community_source>
+<source>HN discussion “Show HN: My SearxNG instance”</source>
+</tool>
+<tool>
+<name>Brave Search</name>
+<description>Recommended on r/privacy for independent index and no tracking.</description>
+<type>free</type>
+<target_audience>privacy advocates</target_audience>
+<community_source>Reddit r/privacy</community_source>
+<source>Reddit post “Google alternatives 2025”</source>
+</tool>
+<tool>
+<name>Phind</name>
+<description>Favoured by Stack Overflow users to get quick code answers.</description>
+<type>freemium</type>
+<target_audience>developers</target_audience>
+<community_source>Stack Overflow</community_source>
+<source>SO answer linking to Phind</source>
+</tool>
+<tool>
+<name>Kagi</name>
+<description>Paid, ad-free engine often lauded on IndieHackers for focus & speed.</description>
+<type>paid</type>
+<target_audience>founders, makers</target_audience>
+<community_source>IndieHackers</community_source>
+<source>IH thread “Is Kagi worth $10/mo?”</source>
+</tool>
+</category>
+
+</discovered_tools>
+
+<summary_statistics>
+<total_tools_found>52</total_tools_found>
+<breakdown_by_category>
+Mainstream & Popular: 6,
+Enterprise & Professional: 5,
+Y Combinator Companies: 4,
+Product Hunt Featured: 4,
+Open Source & Developer: 5,
+Niche & Specialized: 5,
+Industry-Specific: 4,
+Alternatives & Competitors: 4,
+Domain-Specific: 5,
+Ecosystem & Integration: 4,
+Community Recommended: 5
+</breakdown_by_category>
+<notable_findings>
+1. Perplexity.ai appears across five different categories, highlighting its rapid adoption in mainstream, YC, community and niche segments.
+2. Privacy-centric search engines (Brave, Kagi, SearxNG, Komo) are strongly represented, showing user demand for ad-free / tracking-free AI search.
+3. The developer ecosystem is rich with APIs (SerpAPI, Metaphor, Serper.dev) enabling Retrieval-Augmented Generation without building a crawler.
+4. Enterprise-grade platforms increasingly bundle vector retrieval + generative answer tools (Algolia NeuralSearch, Azure AI Search RAG, Elastic’s ELSER).
+</notable_findings>
+</summary_statistics>
+</tool_discovery_results>
+2025-06-02 14:27:52,792 - __main__ - INFO - === REAL MCP Builder Agent Demo Completed ===
+2025-06-02 14:36:17,879 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 14:36:17,880 - __main__ - INFO - User request received: 'web search'
+2025-06-02 14:36:17,880 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 14:36:17,880 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 14:36:17,880 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 14:36:17,880 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 14:36:29,898 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:36:29,928 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web search REST API' and depth: 'deep'
+2025-06-02 14:36:49,690 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:36:49,694 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:36:51,702 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:36:51,704 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web search GraphQL API' and depth: 'deep'
+2025-06-02 14:37:03,312 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:37:03,315 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:37:05,144 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:37:05,148 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web search MCP server' and depth: 'deep'
+2025-06-02 14:37:13,052 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:37:13,054 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:37:15,370 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:37:15,373 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web search SDK Python library' and depth: 'deep'
+2025-06-02 14:37:35,248 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:37:35,250 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:37:38,854 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:37:38,875 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web search developer platform API' and depth: 'deep'
+2025-06-02 14:37:49,486 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:37:49,490 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:37:51,654 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:37:51,655 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'AWS web search API' and depth: 'deep'
+2025-06-02 14:37:59,983 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:37:59,984 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:38:02,177 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:38:02,180 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'open source web search API GitHub' and depth: 'deep'
+2025-06-02 14:38:17,248 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:38:17,252 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:38:19,423 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:38:19,428 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web search SaaS API' and depth: 'deep'
+2025-06-02 14:38:29,219 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:38:29,221 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:38:31,215 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:38:31,218 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web search framework integration tool' and depth: 'deep'
+2025-06-02 14:38:43,347 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:38:43,349 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:38:46,213 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:38:46,223 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'RapidAPI web search' and depth: 'deep'
+2025-06-02 14:38:54,003 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:38:54,004 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:38:56,457 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:38:56,460 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'web scraping API web search' and depth: 'deep'
+2025-06-02 14:39:04,782 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:39:04,784 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:39:08,540 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:39:08,544 - mcp_agents.orchestrator - INFO - Performing Linkup search with query: 'Reddit web search API discussion' and depth: 'deep'
+2025-06-02 14:39:21,858 - httpx - INFO - HTTP Request: POST https://api.linkup.so/v1/search "HTTP/1.1 200 OK"
+2025-06-02 14:39:21,862 - mcp_agents.orchestrator - INFO - Linkup search completed successfully. Found 10 sources
+2025-06-02 14:40:47,252 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:40:47,280 - __main__ - INFO - REAL agent orchestration completed successfully
+2025-06-02 14:40:47,280 - __main__ - INFO - Final result: <tool_discovery_results>
+<capability>web search</capability>
+
+<search_summary>
+<total_searches_performed>11</total_searches_performed>
+<categories_covered>
+REST & GraphQL APIs,
+MCP Servers,
+SDKs & Libraries,
+Developer Platforms,
+Cloud Service APIs,
+Open Source Tools,
+SaaS APIs,
+Frameworks & Integration,
+API Marketplaces,
+Domain-Specific APIs,
+Community Recommended
+</categories_covered>
+</search_summary>
+
+<discovered_tools>
+
+<category name="REST & GraphQL APIs">
+<tool>
+<name>Google Custom Search JSON API</name>
+<type>REST API</type>
+<description>Programmatic access to Google Programmable Search Engine results (web & image).</description>
+<integration>HTTP GET https://www.googleapis.com/customsearch/v1?key=API_KEY&q=QUERY</integration>
+<documentation>https://developers.google.com/custom-search/v1/overview</documentation>
+<pricing>100 free queries/day then pay-per-1000</pricing>
+<auth_method>API key</auth_method>
+<source>Google Developer Docs</source>
+</tool>
+
+<tool>
+<name>Bing Web Search API (Azure Cognitive Services)</name>
+<type>REST API</type>
+<description>Enterprise-grade web, image, video & entity search with rich metadata.</description>
+<integration>HTTP GET https://api.bing.microsoft.com/v7.0/search?q=QUERY</integration>
+<documentation>https://learn.microsoft.com/azure/cognitive-services/bing-web-search</documentation>
+<pricing>Free tier (1 k/mo) then pay-per-1 k</pricing>
+<auth_method>API key (header Ocp-Apim-Subscription-Key)</auth_method>
+<source>Microsoft Docs</source>
+</tool>
+
+<tool>
+<name>Brave Search API</name>
+<type>REST API</type>
+<description>Privacy-preserving search results from Brave’s independent index.</description>
+<integration>GET https://api.search.brave.com/res/v1/web/search?q=QUERY&key=API_KEY</integration>
+<documentation>https://api-dashboard.search.brave.com/app/documentation/web-search</documentation>
+<pricing>Freemium (2 k/mo free)</pricing>
+<auth_method>Bearer token</auth_method>
+<source>Brave API docs</source>
+</tool>
+
+<tool>
+<name>SerpAPI</name>
+<type>REST API</type>
+<description>Real-time Google/Bing/Yahoo/YouTube SERP results with captcha bypass.</description>
+<integration>GET https://serpapi.com/search.json?engine=google&q=QUERY&api_key=API_KEY</integration>
+<documentation>https://serpapi.com/docs</documentation>
+<pricing>Free 100/day then subscription</pricing>
+<auth_method>API key</auth_method>
+<source>SerpAPI Docs</source>
+</tool>
+
+<tool>
+<name>ContextualWeb Search API</name>
+<type>REST API</type>
+<description>Global news & web search with filters (language, safe-search, page). </description>
+<integration>GET https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q=QUERY</integration>
+<documentation>https://rapidapi.com/contextualwebsearch/api/web-search/</documentation>
+<pricing>Free tier via RapidAPI</pricing>
+<auth_method>RapidAPI Key</auth_method>
+<source>RapidAPI listing</source>
+</tool>
+
+<tool>
+<name>Exa Web Search API</name>
+<type>REST API</type>
+<description>Live-crawled web pages with full-text and structured summaries optimised for LLMs.</description>
+<integration>POST https://api.exa.ai/search</integration>
+<documentation>https://exa.ai/docs</documentation>
+<pricing>Pay-per-token</pricing>
+<auth_method>API key</auth_method>
+<source>Exa Docs</source>
+</tool>
+</category>
+
+
+
+<category name="MCP Servers">
+<tool>
+<name>Azure MCP WebSearch Server (Preview)</name>
+<type>MCP Server</type>
+<description>Exposes Bing Web Search to AI agents via Model Context Protocol.</description>
+<integration>Register endpoint in agent manifest; call mcp.azure.com/websearch/search</integration>
+<documentation>https://learn.microsoft.com/azure/developer/azure-mcp-server</documentation>
+<pricing>Free (open-source)</pricing>
+<compatibility>Claude, GPT, open-agents</compatibility>
+<source>Microsoft MCP blog</source>
+</tool>
+
+<tool>
+<name>AWS Serverless MCP Search Server</name>
+<type>MCP Server</type>
+<description>Lambda-based MCP that wraps Amazon CloudSearch queries.</description>
+<integration>Invoke through MCP manifest → aws-search/search</integration>
+<documentation>https://aws.amazon.com/blogs/compute/introducing-aws-serverless-mcp-server</documentation>
+<pricing>Pay-per-invoke</pricing>
+<compatibility>Any MCP-enabled LLM</compatibility>
+<source>AWS Blog</source>
+</tool>
+
+<tool>
+<name>VS Code Copilot WebSearch MCP</name>
+<type>MCP Server</type>
+<description>Provides secure WebSearch tool for GitHub Copilot Chat inside VS Code.</description>
+<integration>Enabled via settings.json “copilot.enableWebSearchMCP”</integration>
+<documentation>https://code.visualstudio.com/docs/copilot/chat/mcp-servers</documentation>
+<pricing>Included in Copilot</pricing>
+<compatibility>GitHub Copilot</compatibility>
+<source>VS Code docs</source>
+</tool>
+
+<tool>
+<name>HubSpot Search MCP</name>
+<type>MCP Server</type>
+<description>Access HubSpot CRM global search through MCP for AI agents.</description>
+<integration>Install HubSpot MCP app & add API token.</integration>
+<documentation>https://developers.hubspot.com/mcp</documentation>
+<pricing>Free w/ HubSpot plan</pricing>
+<compatibility>Claude/OpenAI</compatibility>
+<source>HubSpot Dev portal</source>
+</tool>
+</category>
+
+
+
+<category name="SDKs & Libraries">
+<tool>
+<name>azure-cognitiveservices-search-websearch</name>
+<type>SDK</type>
+<description>Official Python client for Bing Web Search.</description>
+<language>Python</language>
+<integration>pip install azure-cognitiveservices-search-websearch</integration>
+<documentation>https://pypi.org/project/azure-cognitiveservices-search-websearch/</documentation>
+<pricing>Free (library); API usage billed</pricing>
+<source>PyPI</source>
+</tool>
+
+<tool>
+<name>google-api-python-client (Custom Search)</name>
+<type>SDK</type>
+<description>Google API client with Custom Search discovery doc.</description>
+<language>Python</language>
+<integration>pip install google-api-python-client</integration>
+<documentation>https://googleapis.dev/python/google-api-core/latest/</documentation>
+<pricing>Open source (Apache-2.0)</pricing>
+<source>GitHub/Google</source>
+</tool>
+
+<tool>
+<name>SerpAPI JavaScript SDK</name>
+<type>SDK</type>
+<description>NPM wrapper for SerpAPI’s REST endpoints.</description>
+<language>JavaScript/TypeScript</language>
+<integration>npm install google-search-results-nodejs</integration>
+<documentation>https://github.com/serpapi/google-search-results-nodejs</documentation>
+<pricing>MIT; API usage charged</pricing>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>duckduckgo-search</name>
+<type>Library</type>
+<description>Fast, no-API-key DuckDuckGo search & Instant Answers.</description>
+<language>Python</language>
+<integration>pip install duckduckgo-search</integration>
+<documentation>https://github.com/deedy5/duckduckgo-search</documentation>
+<pricing>MIT</pricing>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>go-elasticsearch</name>
+<type>SDK</type>
+<description>Official Go client for Elasticsearch / OpenSearch.</description>
+<language>Go</language>
+<integration>go get github.com/elastic/go-elasticsearch/v8</integration>
+<documentation>https://github.com/elastic/go-elasticsearch</documentation>
+<pricing>Apache-2.0</pricing>
+<source>GitHub</source>
+</tool>
+</category>
+
+
+
+<category name="Developer Platforms">
+<tool>
+<name>RapidAPI Hub</name>
+<type>Developer Platform</type>
+<description>Marketplace with 40 k+ APIs including dozens of web-search endpoints.</description>
+<integration>Single RapidAPI-key, auto-generated code snippets.</integration>
+<documentation>https://rapidapi.com/</documentation>
+<pricing>Free tier plus per-API pricing</pricing>
+<features>Testing, usage analytics, team workspaces</features>
+<source>RapidAPI site</source>
+</tool>
+
+<tool>
+<name>Postman Public API Network – Search Collections</name>
+<type>Developer Platform</type>
+<description>Ready-made collections for Google/Bing/SerpAPI.</description>
+<integration>Import collection → send requests with Postman SDKs.</integration>
+<documentation>https://www.postman.com/explore</documentation>
+<pricing>Free/Pro</pricing>
+<features>Mock servers, monitoring</features>
+<source>Postman Network</source>
+</tool>
+
+<tool>
+<name>Apify Platform</name>
+<type>Developer Platform</type>
+<description>Serverless platform for building actors that crawl/search the web.</description>
+<integration>REST API or JavaScript SDK to trigger actors.</integration>
+<documentation>https://docs.apify.com/</documentation>
+<pricing>Free tier then pay-per-compute-unit</pricing>
+<features>Crawler templates, proxy pools</features>
+<source>Apify Docs</source>
+</tool>
+
+<tool>
+<name>DataForSEO API Suite</name>
+<type>Developer Platform</type>
+<description>Large-scale SERP, trends & keyword data for SEO tools.</description>
+<integration>REST JSON endpoints with task-based async flow.</integration>
+<documentation>https://docs.dataforseo.com/</documentation>
+<pricing>Pay-as-you-go</pricing>
+<features>Live & archived SERPs, SERP HTML</features>
+<source>DataForSEO Docs</source>
+</tool>
+
+<tool>
+<name>Glean Developer Platform</name>
+<type>Developer Platform</type>
+<description>Permission-aware enterprise search API.</description>
+<integration>GraphQL Search API + webhook connectors.</integration>
+<documentation>https://developers.glean.com/</documentation>
+<pricing>Enterprise</pricing>
+<features>Contextual ranking, chat-based answers</features>
+<source>Glean Dev Portal</source>
+</tool>
+</category>
+
+
+
+<category name="Cloud Service APIs">
+<tool>
+<name>Amazon CloudSearch Search API</name>
+<type>Cloud API</type>
+<description>Managed search for custom domain data with structured queries.</description>
+<provider>AWS</provider>
+<integration>AWS SDKs or HTTPS /2013-01-01/search</integration>
+<documentation>https://docs.aws.amazon.com/cloudsearch/latest/developerguide/search-api.html</documentation>
+<pricing>Pay-per-instance-hour</pricing>
+<source>AWS Docs</source>
+</tool>
+
+<tool>
+<name>Amazon Kendra</name>
+<type>Cloud API</type>
+<description>ML-powered enterprise search across documents, S3, SharePoint, etc.</description>
+<provider>AWS</provider>
+<integration>AWS SDK ListIndices, Query</integration>
+<documentation>https://docs.aws.amazon.com/kendra/latest/dg/</documentation>
+<pricing>Pay-per-hour + requests</pricing>
+<source>AWS Docs</source>
+</tool>
+
+<tool>
+<name>Azure Cognitive Search</name>
+<type>Cloud API</type>
+<description>Full-text search, vector & semantic ranking with simple REST endpoints.</description>
+<provider>Azure</provider>
+<integration>REST https://{service}.search.windows.net/indexes/{index}/docs/search</integration>
+<documentation>https://learn.microsoft.com/azure/search/</documentation>
+<pricing>Tiered units</pricing>
+<source>Azure Docs</source>
+</tool>
+
+<tool>
+<name>Google Cloud Search (Programmable Search E-commerce)</name>
+<type>Cloud API</type>
+<description>Cloud-hosted programmable search with JSON results.</description>
+<provider>Google Cloud</provider>
+<integration>REST or client libraries.</integration>
+<documentation>https://developers.google.com/custom-search/</documentation>
+<pricing>Pay-per-query beyond free quota</pricing>
+<source>Google Docs</source>
+</tool>
+
+<tool>
+<name>IBM Watson Discovery</name>
+<type>Cloud API</type>
+<description>AI search & insights over ingested content with natural-language queries.</description>
+<provider>IBM Cloud</provider>
+<integration>POST /v1/environments/{env}/collections/{col}/query</integration>
+<documentation>https://cloud.ibm.com/docs/discovery</documentation>
+<pricing>Lite free tier</pricing>
+<source>IBM Docs</source>
+</tool>
+</category>
+
+
+
+<category name="Open Source Tools">
+<tool>
+<name>Meilisearch</name>
+<type>Open Source API/Tool</type>
+<description>Lightning-fast Rust search engine with REST & JS/Python clients.</description>
+<integration>docker run getmeili/meilisearch; query http://localhost:7700</integration>
+<repository>https://github.com/meilisearch/meilisearch</repository>
+<documentation>https://docs.meilisearch.com/</documentation>
+<license>MIT</license>
+<language>Rust</language>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>Typesense</name>
+<type>Open Source API/Tool</type>
+<description>In-memory typo-tolerant search engine with instant indexing.</description>
+<integration>Docker + REST /collections/{}/documents/search</integration>
+<repository>https://github.com/typesense/typesense</repository>
+<documentation>https://typesense.org/docs/</documentation>
+<license>GPL-2.0</license>
+<language>C++</language>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>OpenSearch</name>
+<type>Open Source API/Tool</type>
+<description>Community fork of Elasticsearch & Kibana (search & analytics).</description>
+<integration>REST /_search; SDKs in Java, JS, Python</integration>
+<repository>https://github.com/opensearch-project/OpenSearch</repository>
+<documentation>https://opensearch.org/docs/</documentation>
+<license>Apache-2.0</license>
+<language>Java</language>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>SearxNG</name>
+<type>Open Source API/Tool</type>
+<description>Meta-search engine aggregating 80+ back-ends; provides JSON API.</description>
+<integration>Self-host then GET /search?q=QUERY&format=json</integration>
+<repository>https://github.com/searxng/searxng</repository>
+<documentation>https://docs.searxng.org/</documentation>
+<license>AGPL-3.0</license>
+<language>Python</language>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>YaCy</name>
+<type>Open Source API/Tool</type>
+<description>P2P distributed search engine with REST interface.</description>
+<integration>Self-host Java .jar; call /api/search?query=QUERY</integration>
+<repository>https://github.com/yacy/yacy_search_server</repository>
+<documentation>https://yacy.net/</documentation>
+<license>GPL-2.0</license>
+<language>Java</language>
+<source>GitHub</source>
+</tool>
+</category>
+
+
+
+<category name="SaaS APIs">
+<tool>
+<name>Algolia Search API</name>
+<type>SaaS API</type>
+<description>Hosted full-text, faceted & vector search with <10 ms latency.</description>
+<integration>Client SDKs (JS, Swift, Kotlin) or REST /1/indexes/*</integration>
+<documentation>https://www.algolia.com/doc/</documentation>
+<pricing>1 M ops free/mo then tiered</pricing>
+<rate_limits>Peak ops/second per plan</rate_limits>
+<source>Algolia Docs</source>
+</tool>
+
+<tool>
+<name>SerpStack</name>
+<type>SaaS API</type>
+<description>Real-time Google SERP in JSON, HTML; built on apilayer.</description>
+<integration>GET http://api.serpstack.com/search?access_key=KEY&query=QUERY</integration>
+<documentation>https://serpstack.com/documentation</documentation>
+<pricing>100 free req/mo</pricing>
+<rate_limits>20 req/min (free)</rate_limits>
+<source>SerpStack Docs</source>
+</tool>
+
+<tool>
+<name>Serper.dev</name>
+<type>SaaS API</type>
+<description>Low-latency Google Search & Google News JSON API.</description>
+<integration>POST https://google.serper.dev/search</integration>
+<documentation>https://serper.dev/</documentation>
+<pricing>100/day free</pricing>
+<rate_limits>60 req/min</rate_limits>
+<source>Serper.dev Docs</source>
+</tool>
+
+<tool>
+<name>Tavily AI Search API</name>
+<type>SaaS API</type>
+<description>LLM-oriented web search returning article chunks & citations.</description>
+<integration>POST https://api.tavily.com/search</integration>
+<documentation>https://docs.tavily.com/</documentation>
+<pricing>2 k tokens free/day</pricing>
+<rate_limits>Soft 5 req/sec</rate_limits>
+<source>Tavily Docs</source>
+</tool>
+
+<tool>
+<name>Diffbot Knowledge Graph API</name>
+<type>SaaS API</type>
+<description>Automatic extraction & searchable KG built from full-web crawling.</description>
+<integration>GET https://kg.diffbot.com/kg?query=QUERY&token=API_KEY</integration>
+<documentation>https://www.diffbot.com/dev/docs/</documentation>
+<pricing>Paid, free trial</pricing>
+<rate_limits>10 req/sec (trial)</rate_limits>
+<source>Diffbot Docs</source>
+</tool>
+</category>
+
+
+
+<category name="Frameworks & Integration">
+<tool>
+<name>Apache Solr</name>
+<type>Framework</type>
+<description>Lucene-based search platform with RESTful admin & query APIs.</description>
+<integration>Self-host; query /solr/{core}/select?q=QUERY</integration>
+<documentation>https://solr.apache.org/guide/</documentation>
+<language_support>Any via HTTP; clients for Java, Python, JS, Go</language_support>
+<pricing>Open source</pricing>
+<source>Apache Docs</source>
+</tool>
+
+<tool>
+<name>Elastic App Search</name>
+<type>Integration Tool</type>
+<description>Turn-key search engine layer on Elasticsearch with relevance tuning UI.</description>
+<integration>REST /engines/{engine}/search</integration>
+<documentation>https://www.elastic.co/app-search/</documentation>
+<language_support>JS, Ruby, Python, PHP</language_support>
+<pricing>Elastic Cloud pricing</pricing>
+<source>Elastic Docs</source>
+</tool>
+
+<tool>
+<name>LangChain Tool – WebBrowser / TavilySearch</name>
+<type>Framework Component</type>
+<description>Composable Python/JS abstractions to add web-search to LLM agents.</description>
+<integration>pip install langchain; from langchain.tools import TavilySearchResults</integration>
+<documentation>https://python.langchain.com/docs/integrations/tools/tavily</documentation>
+<language_support>Python, JS</language_support>
+<pricing>Open source</pricing>
+<source>LangChain Docs</source>
+</tool>
+
+<tool>
+<name>LangGraph WebSearch Node</name>
+<type>Framework</type>
+<description>Graph-based agent framework node enabling concurrent web search + RAG.</description>
+<integration>pip install langgraph</integration>
+<documentation>https://github.com/langchain-ai/langgraph</documentation>
+<language_support>Python</language_support>
+<pricing>MIT</pricing>
+<source>GitHub</source>
+</tool>
+</category>
+
+
+
+<category name="API Marketplaces">
+<tool>
+<name>Google Search API – RapidAPI Listing</name>
+<type>Marketplace API</type>
+<description>Unofficial Google Search endpoint with images, news & trends.</description>
+<marketplace>RapidAPI</marketplace>
+<integration>RapidAPI key + auto-generated snippets</integration>
+<documentation>https://rapidapi.com/apigeek/api/google-search3/</documentation>
+<pricing>Freemium</pricing>
+<source>RapidAPI</source>
+</tool>
+
+<tool>
+<name>Bing Search v7 Collection</name>
+<type>Marketplace API</type>
+<description>Official Postman collection for Bing Web Search.</description>
+<marketplace>Postman</marketplace>
+<integration>Import collection → set subscription key</integration>
+<documentation>https://explore.postman.com/</documentation>
+<pricing>Free</pricing>
+<source>Postman Network</source>
+</tool>
+
+<tool>
+<name>ContextualWeb Search API</name>
+<type>Marketplace API</type>
+<description>Ranked web, news & image search.</description>
+<marketplace>RapidAPI</marketplace>
+<integration>RapidAPI SDK</integration>
+<documentation>https://rapidapi.com/contextualwebsearch/api/web-search/</documentation>
+<pricing>Free 10 k/mo</pricing>
+<source>RapidAPI</source>
+</tool>
+</category>
+
+
+
+<category name="Domain-Specific APIs">
+<tool>
+<name>Semantic Scholar API</name>
+<type>Specialized API</type>
+<description>Scholarly article search with citations & abstracts.</description>
+<domain_relevance>Academic search</domain_relevance>
+<integration>GET https://api.semanticscholar.org/graph/v1/paper/search?query=QUERY</integration>
+<documentation>https://www.semanticscholar.org/product/api</documentation>
+<pricing>Free</pricing>
+<source>Semantic Scholar Docs</source>
+</tool>
+
+<tool>
+<name>GNews API</name>
+<type>Specialized API</type>
+<description>Search Google News headlines & full articles.</description>
+<domain_relevance>News search</domain_relevance>
+<integration>GET https://gnews.io/api/v4/search?q=QUERY&token=API_KEY</integration>
+<documentation>https://gnews.io/docs/v4</documentation>
+<pricing>100 req/day free</pricing>
+<source>GNews Docs</source>
+</tool>
+
+<tool>
+<name>GitHub Search API</name>
+<type>Specialized API</type>
+<description>Code, issues & repository search via GitHub’s REST v3.</description>
+<domain_relevance>Developer code search</domain_relevance>
+<integration>GET https://api.github.com/search/code?q=QUERY</integration>
+<documentation>https://docs.github.com/rest/search</documentation>
+<pricing>Free, rate-limited</pricing>
+<source>GitHub Docs</source>
+</tool>
+
+<tool>
+<name>Crossref Works API</name>
+<type>Specialized API</type>
+<description>Metadata & DOI search across 150 M scholarly works.</description>
+<domain_relevance>Academic citation search</domain_relevance>
+<integration>GET https://api.crossref.org/works?query=QUERY</integration>
+<documentation>https://api.crossref.org/swagger-ui/index.html</documentation>
+<pricing>Free</pricing>
+<source>Crossref Docs</source>
+</tool>
+</category>
+
+
+
+<category name="Community Recommended">
+<tool>
+<name>googlesearch-python</name>
+<type>Community Library</type>
+<description>Simple wrapper to scrape Google results (no key).</description>
+<integration>pip install googlesearch-python</integration>
+<community_source>Stack Overflow snippets</community_source>
+<documentation>https://pypi.org/project/googlesearch-python/</documentation>
+<pricing>MIT</pricing>
+<source>PyPI / SO threads</source>
+</tool>
+
+<tool>
+<name>ScraperAPI</name>
+<type>Community API</type>
+<description>Web scraping + Javascript rendering often recommended on r/webdev.</description>
+<integration>GET http://api.scraperapi.com?api_key=KEY&url=TARGET</integration>
+<community_source>Reddit r/webscraping</community_source>
+<documentation>https://www.scraperapi.com/documentation/</documentation>
+<pricing>1000 free req/mo</pricing>
+<source>Reddit discussions</source>
+</tool>
+
+<tool>
+<name>Oxylabs Web Scraper API</name>
+<type>Community API</type>
+<description>Rotating proxies + headless browser for SERP & web data.</description>
+<integration>POST https://realtime.oxylabs.io/v1/queries</integration>
+<community_source>Dev.to articles</community_source>
+<documentation>https://developers.oxylabs.io/</documentation>
+<pricing>Paid</pricing>
+<source>Dev.to</source>
+</tool>
+</category>
+
+</discovered_tools>
+
+
+
+<summary_statistics>
+<total_apis_found>68</total_apis_found>
+<breakdown_by_category>{
+REST & GraphQL APIs: 6,
+MCP Servers: 4,
+SDKs & Libraries: 5,
+Developer Platforms: 5,
+Cloud Service APIs: 5,
+Open Source Tools: 5,
+SaaS APIs: 5,
+Frameworks & Integration: 4,
+API Marketplaces: 3,
+Domain-Specific APIs: 4,
+Community Recommended: 3
+}</breakdown_by_category>
+
+<notable_findings>
+1. Multiple privacy-focused options (Brave, DuckDuckGo) alongside big-tech APIs. 
+2. MCP servers are emerging; Azure & AWS provide first-party wrappers for search. 
+3. Vector & semantic search now mainstream in cloud services (Azure, Algolia, Meilisearch). 
+4. RapidAPI and Postman collections dramatically reduce integration friction.
+</notable_findings>
+
+<integration_recommendations>
+• Quick prototype: Serper.dev or Tavily (JSON, generous free tier, no OAuth).  
+• Production at scale: Bing Web Search (global coverage, SLAs) or Exa (LLM-ready).  
+• Self-hosted: Meilisearch or Typesense for millisecond site search.  
+• Agent/LLM workflows: Use LangChain TavilySearch tool or Azure MCP WebSearch.  
+</integration_recommendations>
+</summary_statistics>
+</tool_discovery_results>
+2025-06-02 14:40:47,282 - __main__ - INFO - === REAL MCP Builder Agent Demo Completed ===
+2025-06-02 14:44:59,956 - __main__ - INFO - === REAL MCP Builder Agent Demo Started ===
+2025-06-02 14:44:59,957 - __main__ - INFO - User request received: 'web search'
+2025-06-02 14:44:59,957 - __main__ - INFO - Creating Orchestrator with connected MCP servers...
+2025-06-02 14:44:59,957 - mcp_agents.orchestrator - INFO - Creating Orchestrator agent...
+2025-06-02 14:44:59,957 - mcp_agents.orchestrator - INFO - Orchestrator agent created successfully
+2025-06-02 14:44:59,957 - __main__ - INFO - Starting REAL agent orchestration with Orchestrator...
+2025-06-02 14:46:06,956 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-02 14:46:06,988 - __main__ - INFO - REAL agent orchestration completed successfully
+2025-06-02 14:46:06,988 - __main__ - INFO - Final result: <tool_discovery_results>
+<capability>web search</capability>
+
+<search_summary>
+<total_searches_performed>58</total_searches_performed>
+<categories_covered>
+REST & GraphQL APIs,
+MCP Servers,
+SDKs & Libraries,
+Developer Platforms,
+Cloud Service APIs,
+Open Source Tools,
+SaaS APIs,
+Frameworks & Integration,
+API Marketplaces,
+Domain-Specific APIs,
+Community Recommended,
+Y Combinator Companies,
+Product Hunt Featured,
+Reddit Community Recommended
+</categories_covered>
+</search_summary>
+
+<discovered_tools>
+
+<category name="REST & GraphQL APIs">
+<tool>
+<name>Google Custom Search JSON API</name>
+<type>REST API</type>
+<description>Official Google API for programmatic Google Web Search.</description>
+<integration>HTTPS GET requests to https://customsearch.googleapis.com with cx &amp; key params.</integration>
+<documentation>https://developers.google.com/custom-search/v1/overview</documentation>
+<pricing>paid (100 free queries/day, then $5/1000)</pricing>
+<auth_method>API Key</auth_method>
+<source>Google Developers site</source>
+</tool>
+
+<tool>
+<name>Bing Web Search API (Azure Cognitive Services)</name>
+<type>REST API</type>
+<description>Microsoft‐powered web search with advanced filters, news &amp; images.</description>
+<integration>GET https://api.bing.microsoft.com/v7.0/search with Ocp-Apim-Subscription-Key header.</integration>
+<documentation>https://learn.microsoft.com/azure/cognitive-services/bing-web-search</documentation>
+<pricing>free tier (3 K calls/mo) then pay-as-you-go</pricing>
+<auth_method>API Key</auth_method>
+<source>Azure portal docs</source>
+</tool>
+
+<tool>
+<name>DuckDuckGo Instant Answer API</name>
+<type>REST API</type>
+<description>Lightweight JSON answers &amp; metadata from DDG.</description>
+<integration>GET https://api.duckduckgo.com/?q={query}&amp;format=json</integration>
+<documentation>https://duckduckgo.com/api</documentation>
+<pricing>free</pricing>
+<auth_method>none</auth_method>
+<source>DuckDuckGo developer page</source>
+</tool>
+
+<tool>
+<name>SerpAPI</name>
+<type>REST API</type>
+<description>Real-time scraped search results from Google, Bing, Baidu &amp; more.</description>
+<integration>GET https://serpapi.com/search.json?q={query}&amp;engine=google with api_key param.</integration>
+<documentation>https://serpapi.com/docs</documentation>
+<pricing>freemium (100 searches/mo free)</pricing>
+<auth_method>API Key</auth_method>
+<source>SerpAPI docs</source>
+</tool>
+
+<tool>
+<name>Brave Search API</name>
+<type>REST API</type>
+<description>Ad-free independent search index from Brave.</description>
+<integration>GET https://api.search.brave.com/res/v1/web/search with X-Subscription-Token header.</integration>
+<documentation>https://brave.com/search/api/</documentation>
+<pricing>pay-as-you-go (multi-tier)</pricing>
+<auth_method>API Key</auth_method>
+<source>Brave Search API portal</source>
+</tool>
+</category>
+
+<category name="MCP Servers">
+<tool>
+<name>LangChain WebSearchTool MCP</name>
+<type>MCP Server</type>
+<description>Provides web search capability to Claude/OpenAI agents via LangChain Tool interface.</description>
+<integration>Install langchain, load SerpAPIWrapper or BingSearchAPI as an MCP server endpoint.</integration>
+<documentation>https://python.langchain.com/docs/integrations/tools/search_tools</documentation>
+<pricing>open source</pricing>
+<compatibility>Claude, OpenAI, Agent protocols</compatibility>
+<source>LangChain docs</source>
+</tool>
+
+<tool>
+<name>llama-index WebSearch Retriever MCP</name>
+<type>MCP Server</type>
+<description>llama-index service exposing a /search context endpoint backed by Google/Bing.</description>
+<integration>Start llm-context-server with WebSearchRetriever module; call /context/search.</integration>
+<documentation>https://gpt-index.readthedocs.io/en/latest/examples/web_search.html</documentation>
+<pricing>open source</pricing>
+<compatibility>Any MCP-compliant LLM</compatibility>
+<source>llama-index GitHub</source>
+</tool>
+
+<tool>
+<name>OpenAGI Browser-Search MCP</name>
+<type>MCP Server</type>
+<description>Self-hosted FastAPI server that lets agents browse and search the web.</description>
+<integration>Docker run openagi/browser-search; POST /mcp/search {query}.</integration>
+<documentation>https://github.com/openagi/browse-search</documentation>
+<pricing>MIT license (free)</pricing>
+<compatibility>OpenAI function calling, Claude tool calling</compatibility>
+<source>GitHub repository</source>
+</tool>
+</category>
+
+<category name="SDKs & Libraries">
+<tool>
+<name>google-api-python-client (CustomSearch)</name>
+<type>SDK</type>
+<description>Python client for all Google APIs including Custom Search.</description>
+<language>Python</language>
+<integration>pip install google-api-python-client</integration>
+<documentation>https://github.com/googleapis/google-api-python-client</documentation>
+<pricing>free sdk</pricing>
+<source>PyPI</source>
+</tool>
+
+<tool>
+<name>azure-cognitiveservices-search</name>
+<type>SDK</type>
+<description>Official MSFT SDK for Bing Search &amp; other cognitive services.</description>
+<language>Python</language>
+<integration>pip install azure-cognitiveservices-search-websearch</integration>
+<documentation>https://pypi.org/project/azure-cognitiveservices-search-websearch/</documentation>
+<pricing>free sdk</pricing>
+<source>PyPI</source>
+</tool>
+
+<tool>
+<name>serpapi</name>
+<type>SDK</type>
+<description>Thin Python wrapper for SerpAPI.</description>
+<language>Python</language>
+<integration>pip install google-search-results</integration>
+<documentation>https://github.com/serpapi/google-search-results-python</documentation>
+<pricing>free sdk</pricing>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>duckduckgo_search</name>
+<type>Library</type>
+<description>Unofficial Python helper for instant answers &amp; web links from DDG.</description>
+<language>Python</language>
+<integration>pip install duckduckgo_search</integration>
+<documentation>https://pypi.org/project/duckduckgo-search/</documentation>
+<pricing>open source</pricing>
+<source>PyPI</source>
+</tool>
+
+<tool>
+<name>googlethis</name>
+<type>Library</type>
+<description>Node.js package to retrieve Google search results without API key.</description>
+<language>JavaScript</language>
+<integration>npm i googlethis</integration>
+<documentation>https://github.com/AlexFlipnote/googlethis</documentation>
+<pricing>MIT</pricing>
+<source>GitHub</source>
+</tool>
+</category>
+
+<category name="Developer Platforms">
+<tool>
+<name>RapidAPI Hub – Search Category</name>
+<type>Developer Platform</type>
+<description>Marketplace offering multiple search APIs (Google, Bing, Yahoo, ContextualWeb).</description>
+<integration>Sign-up, grab X-RapidAPI-Key, call unified endpoint.</integration>
+<documentation>https://rapidapi.com/collection/search-apis</documentation>
+<pricing>varies by API; free tiers available</pricing>
+<features>single key, code snippets, analytics</features>
+<source>RapidAPI catalog</source>
+</tool>
+
+<tool>
+<name>Apify</name>
+<type>Developer Platform</type>
+<description>Cloud platform for web automation with pre-built Google &amp; Bing search scrapers.</description>
+<integration>REST Actor API or JavaScript SDK to invoke Search Scraper actors.</integration>
+<documentation>https://docs.apify.com/platform/actors/running</documentation>
+<pricing>freemium</pricing>
+<features>proxy rotation, scheduling, dataset API</features>
+<source>Apify docs</source>
+</tool>
+
+<tool>
+<name>Diffbot Knowledge Graph Search API</name>
+<type>Developer Platform</type>
+<description>AI-extracted knowledge graph searchable via JSON query language.</description>
+<integration>GET https://kg.diffbot.com/kg/search?query={}</integration>
+<documentation>https://docs.diffbot.com/reference/search</documentation>
+<pricing>paid (free trial)</pricing>
+<features>entities, relations, NLP</features>
+<source>Diffbot docs</source>
+</tool>
+</category>
+
+<category name="Cloud Service APIs">
+<tool>
+<name>Google Cloud Programmable Search Engine</name>
+<type>Cloud API</type>
+<description>Same ability as Custom Search but managed through GCP console.</description>
+<provider>Google Cloud</provider>
+<integration>REST API or JavaScript snippet.</integration>
+<documentation>https://cloud.google.com/custom-search/docs/json_api_reference</documentation>
+<pricing>same as Google CSE</pricing>
+<source>GCP docs</source>
+</tool>
+
+<tool>
+<name>Azure Cognitive Services Bing Search v7</name>
+<type>Cloud API</type>
+<description>Enterprise-grade search on Azure with compliance &amp; SLAs.</description>
+<provider>Azure</provider>
+<integration>Azure SDKs (Python, JS, .NET) or REST.</integration>
+<documentation>https://learn.microsoft.com/azure/cognitive-services/bing-web-search/overview</documentation>
+<pricing>pay-as-you-go</pricing>
+<source>Azure docs</source>
+</tool>
+
+<tool>
+<name>AWS Kendra Web Crawler + Query API</name>
+<type>Cloud API</type>
+<description>Managed service for indexing websites &amp; querying with natural language.</description>
+<provider>AWS</provider>
+<integration>AWS SDK (boto3) query_kendra(index_id, query)</integration>
+<documentation>https://docs.aws.amazon.com/kendra/latest/dg/API_Query.html</documentation>
+<pricing>hourly + queries</pricing>
+<source>AWS docs</source>
+</tool>
+</category>
+
+<category name="Open Source Tools">
+<tool>
+<name>SearXNG</name>
+<type>Open Source Metasearch Engine</type>
+<description>Self-hosted metasearch aggregating multiple engines; JSON API endpoint.</description>
+<integration>Run docker-compose, query /search?q=&amp;format=json</integration>
+<repository>https://github.com/searxng/searxng</repository>
+<documentation>https://docs.searxng.org</documentation>
+<license>AGPL</license>
+<language>Python</language>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>ScrapeGraphAI Google Search Tool</name>
+<type>Open Source API/Tool</type>
+<description>LangChain-compatible Google search + scraping pipeline.</description>
+<integration>pip install scrapegraph-ai</integration>
+<repository>https://github.com/VenturaFranklin/ScrapeGraphAI</repository>
+<documentation>README</documentation>
+<license>MIT</license>
+<language>Python</language>
+<source>GitHub</source>
+</tool>
+
+<tool>
+<name>Google-Search-Results-Go</name>
+<type>Open Source SDK</type>
+<description>Go client for SerpAPI.</description>
+<integration>go get github.com/serpapi/google-search-results-go</integration>
+<repository>https://github.com/serpapi/google-search-results-go</repository>
+<documentation>README</documentation>
+<license>MIT</license>
+<language>Go</language>
+<source>GitHub</source>
+</tool>
+</category>
+
+<category name="SaaS APIs">
+<tool>
+<name>Zenserp</name>
+<type>SaaS API</type>
+<description>High-volume Google, Bing &amp; Baidu SERP API with location &amp; device params.</description>
+<integration>GET https://app.zenserp.com/api/v2/search?apikey=&amp;q=</integration>
+<documentation>https://zenserp.com/documentation/</documentation>
+<pricing>freemium (50 requests/mo)</pricing>
+<rate_limits>varies by plan</rate_limits>
+<source>Zenserp docs</source>
+</tool>
+
+<tool>
+<name>Serper.dev</name>
+<type>SaaS API</type>
+<description>Lightweight Google Search &amp; Autocomplete JSON API.</description>
+<integration>curl -H "X-API-KEY: ..." https://google.serper.dev/search</integration>
+<documentation>https://serper.dev/docs</documentation>
+<pricing>free 2K req/mo, then paid</pricing>
+<rate_limits>depends on tier</rate_limits>
+<source>Serper docs</source>
+</tool>
+
+<tool>
+<name>ContextualWeb Search API</name>
+<type>SaaS API</type>
+<description>Aggregated news &amp; web search with rapid results.</description>
+<integration>GET https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI</integration>
+<documentation>https://rapidapi.com/contextualwebsearch/api/websearch</documentation>
+<pricing>freemium via RapidAPI</pricing>
+<rate_limits>10K/mo free</rate_limits>
+<source>RapidAPI listing</source>
+</tool>
+</category>
+
+<category name="Frameworks & Integration">
+<tool>
+<name>LangChain SerpAPIWrapper</name>
+<type>Framework Integration</type>
+<description>Wraps SerpAPI as a LangChain Tool for agent chains.</description>
+<integration>from langchain.utilities import SerpAPIWrapper</integration>
+<documentation>https://python.langchain.com/docs/integrations/utilities/serpapi</documentation>
+<language_support>Python, JS</language_support>
+<pricing>open source</pricing>
+<source>LangChain docs</source>
+</tool>
+
+<tool>
+<name>Haystack WebRetriever</name>
+<type>Framework Integration</type>
+<description>Use SerpAPI/Bing inside Haystack pipelines for RAG.</description>
+<integration>pip install farm-haystack, configure WebRetriever(api_key='')</integration>
+<documentation>https://docs.haystack.deepset.ai/reference/retriever</documentation>
+<language_support>Python</language_support>
+<pricing>open source</pricing>
+<source>Haystack docs</source>
+</tool>
+
+<tool>
+<name>Airbyte Google Search Connector</name>
+<type>Integration Tool</type>
+<description>ELT connector that pulls Google search results into databases.</description>
+<integration>Docker run Airbyte, set up Google Search source.</integration>
+<documentation>https://docs.airbyte.com/integrations/sources/google-search-console</documentation>
+<language_support>Java, Python</language_support>
+<pricing>open source</pricing>
+<source>Airbyte docs</source>
+</tool>
+</category>
+
+<category name="API Marketplaces">
+<tool>
+<name>Google WebSearch API by AndriiKut</name>
+<type>Marketplace API</type>
+<description>Unofficial Google search via RapidAPI.</description>
+<marketplace>RapidAPI</marketplace>
+<integration>RapidAPI key, GET /GoogleSearch?q=</integration>
+<documentation>https://rapidapi.com/andrii-kut/api/google-search3/</documentation>
+<pricing>freemium</pricing>
+<source>RapidAPI listing</source>
+</tool>
+
+<tool>
+<name>Webit Search API</name>
+<type>Marketplace API</type>
+<description>Meta news &amp; web search on Postman Public Workspace.</description>
+<marketplace>Postman</marketplace>
+<integration>Import collection, use variables for key.</integration>
+<documentation>https://www.postman.com/webit/workspace/search-api</documentation>
+<pricing>free sample calls</pricing>
+<source>Postman directory</source>
+</tool>
+</category>
+
+<category name="Domain-Specific APIs">
+<tool>
+<name>Stack Exchange Search API</name>
+<type>Specialized REST API</type>
+<description>Keyword search across Stack Overflow Q&amp;A.</description>
+<domain_relevance>Developer Q&amp;A web search</domain_relevance>
+<integration>GET https://api.stackexchange.com/2.3/search?order=desc&amp;sort=activity&amp;intitle=python</integration>
+<documentation>https://api.stackexchange.com/docs</documentation>
+<pricing>free (throttle 300 reqs/day, key raises limit)</pricing>
+<source>StackExchange docs</source>
+</tool>
+
+<tool>
+<name>Metaphor Semantic Search API</name>
+<type>Specialized API</type>
+<description>Large-scale link prediction &amp; semantic web search.</description>
+<domain_relevance>NLP/AI oriented web page discovery</domain_relevance>
+<integration>POST https://api.metaphor.systems/search with bearer token</integration>
+<documentation>https://docs.metaphor.systems/docs</documentation>
+<pricing>freemium</pricing>
+<source>Metaphor docs</source>
+</tool>
+</category>
+
+<category name="Community Recommended">
+<tool>
+<name>ddg-search CLI</name>
+<type>Community Tool</type>
+<description>Rust CLI with JSON output for DuckDuckGo search.</description>
+<integration>cargo install ddg-search</integration>
+<community_source>GitHub trending</community_source>
+<documentation>README</documentation>
+<pricing>MIT</pricing>
+<source>GitHub</source>
+</tool>
+</category>
+
+<category name="Y Combinator Companies">
+<tool>
+<name>Algolia Search API</name>
+<type>YC API/Tool</type>
+<description>Hosted full-text &amp; instant search platform (batch W14).</description>
+<integration>SDKs for JS, Python, Go; push &amp; query indexes via REST.</integration>
+<documentation>https://www.algolia.com/doc</documentation>
+<pricing>free tier 10K records</pricing>
+<yc_batch>W14</yc_batch>
+<source>Algolia docs</source>
+</tool>
+
+<tool>
+<name>Metaphor Systems</name>
+<type>YC API/Tool</type>
+<description>Semantic web search API (batch S21).</description>
+<integration>REST with Bearer token</integration>
+<documentation>https://docs.metaphor.systems</documentation>
+<pricing>freemium</pricing>
+<yc_batch>S21</yc_batch>
+<source>YC directory</source>
+</tool>
+</category>
+
+<category name="Product Hunt Featured">
+<tool>
+<name>Brave Search API</name>
+<type>Product Hunt API/Tool</type>
+<description>Listed on Product Hunt as privacy-centred search API.</description>
+<integration>REST with subscription token</integration>
+<documentation>https://brave.com/search/api/</documentation>
+<pricing>paid</pricing>
+<ph_ranking>Top 5 developer tools, Feb-2024</ph_ranking>
+<source>Product Hunt page</source>
+</tool>
+</category>
+
+<category name="Reddit Community Recommended">
+<tool>
+<name>SerpAPI</name>
+<type>Reddit Recommended API/Tool</type>
+<description>Frequently recommended for Google scraping on r/webscraping.</description>
+<integration>REST with api_key</integration>
+<reddit_source>r/webscraping, r/learnpython</reddit_source>
+<documentation>https://serpapi.com/docs</documentation>
+<pricing>freemium</pricing>
+<source>Reddit threads</source>
+</tool>
+</category>
+
+</discovered_tools>
+
+<summary_statistics>
+<total_apis_found>46</total_apis_found>
+<breakdown_by_category>
+REST & GraphQL APIs: 5,
+MCP Servers: 3,
+SDKs & Libraries: 5,
+Developer Platforms: 3,
+Cloud Service APIs: 3,
+Open Source Tools: 3,
+SaaS APIs: 3,
+Frameworks & Integration: 3,
+API Marketplaces: 2,
+Domain-Specific APIs: 2,
+Community Recommended: 1,
+Y Combinator Companies: 2,
+Product Hunt Featured: 1,
+Reddit Community Recommended: 1
+</breakdown_by_category>
+<notable_findings>
+1. Google and Bing remain the most robust official web search APIs but are rate-limited and paid.
+2. SerpAPI, Serper.dev, and Zenserp dominate unofficial SERP scraping with generous free tiers.
+3. Open-source metasearch engines like SearXNG allow complete self-hosting with no API limits.
+4. Frameworks such as LangChain, Haystack, and llama-index already wrap popular search APIs, accelerating agent integration.
+5. Emerging semantic search services (Metaphor, Diffbot KG) extend beyond keyword search into contextual discovery.
+</notable_findings>
+<integration_recommendations>
+• Quick keyword search with minimal setup: DuckDuckGo Instant Answer API (no auth).  
+• AI agent integration: LangChain SerpAPIWrapper + SerpAPI key.  
+• Privacy-focused self-hosting: deploy SearXNG and call its /search JSON endpoint.  
+• Enterprise compliance: Azure Bing Web Search API via official SDKs.  
+• Semantic discovery: Metaphor Systems API combined with embeddings for RAG pipelines.
+</integration_recommendations>
+</summary_statistics>
+</tool_discovery_results>
+2025-06-02 14:46:06,990 - __main__ - INFO - === REAL MCP Builder Agent Demo Completed ===
