@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenv
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# IDE / OS specific
+.DS_Store
+.idea/
+*.swp 
