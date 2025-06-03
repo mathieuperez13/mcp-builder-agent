@@ -81,7 +81,8 @@ async def linkup_search_worker(query: str, depth: str = "standard") -> str:
                     for i, source in enumerate(sources, 1):
                         title = source.get("name", source.get("title", "No title"))
                         url = source.get("url", "No URL")
-                        formatted_result += f"{i}. {title} - {url}\n"
+                        snippet = source.get("snippet", "No snippet")
+                        formatted_result += f"{i}. {title} - {url}\n{snippet}\n\n"
                 
                 return formatted_result
             else:
@@ -113,17 +114,26 @@ async def deep_research_tool(subject: str) -> str:
     logger.info(f"Starting deep research for: {subject}")
     
     # Define search categories for comprehensive research
+    
+    # OLD DETAILED SEARCH CATEGORIES (commented out to reduce API calls)
+    # search_categories = {
+    #     "general_info": f"what is {subject} API overview technology description",
+    #     "github_repository": f"{subject} official GitHub repository source code",
+    #     "documentation": f"{subject} official API documentation developer docs",
+    #     "release_info": f"{subject} release date launch date version history",
+    #     "community_feedback": f"site:reddit.com {subject} API pros cons review experience",
+    #     "use_cases": f"{subject} API use cases examples projects tutorials github",
+    #     "compatibility": f"{subject} API stack compatibility python javascript integration",
+    #     "pricing": f"{subject} API pricing free tier business model cost",
+    #     "security": f"{subject} API security SOC compliance data policy",
+    #     "mcp_integration": f"{subject} Model Context Protocol MCP integration"
+    # }
+    
+    # NEW CONSOLIDATED SEARCH CATEGORIES (2 searches instead of 10)
     search_categories = {
-        "general_info": f"what is {subject} API overview technology description",
-        "github_repository": f"{subject} official GitHub repository source code",
-        "documentation": f"{subject} official API documentation developer docs",
-        "release_info": f"{subject} release date launch date version history",
-        "community_feedback": f"site:reddit.com {subject} API pros cons review experience",
-        "use_cases": f"{subject} API use cases examples projects tutorials github",
-        "compatibility": f"{subject} API stack compatibility python javascript integration",
-        "pricing": f"{subject} API pricing free tier business model cost",
-        "security": f"{subject} API security SOC compliance data policy",
-        "mcp_integration": f"{subject} Model Context Protocol MCP integration"
+        "basic_info_technical": f"{subject} API official documentation, GitHub repository stars forks, pricing tiers free tier paid plans business model, release date last update, security SOC2 ISO27001 GDPR compliance, official website logo about description",
+        "community_feedback": f"reddit.com {subject} API review pros cons advantages disadvantages experience, OR producthunt.com {subject} featured product launch upvotes ranking, OR stackoverflow.com {subject} API questions tagged discussions development community feedback",
+        "implementation_examples": f"{subject} API integration code examples python javascript nodejs curl, SDK libraries installation tutorial, use cases projects GitHub repositories implementations, starter templates getting started guide"
     }
 
     try:
@@ -157,16 +167,16 @@ async def deep_research_tool(subject: str) -> str:
 
 # Worker prompt for deep research
 worker_prompt = """
-# Deep Research Specialist for Tool Analysis
+# Deep Research Specialist for Comprehensive Tool Analysis
 
-You are an expert research agent specialized in comprehensive analysis of developer tools and APIs. Your mission is to conduct thorough research and provide structured analysis.
+You are an expert research agent specialized in comprehensive analysis of developer tools and APIs. Your mission is to conduct thorough research and provide detailed structured analysis with all community insights, technical details, and integration information.
 
 ## Your Process
 
 1. **Use the deep_research_tool** to gather comprehensive information about the assigned tool
-2. **Analyze and synthesize** the research data from multiple sources
-3. **Extract key information** focusing on developer needs and implementation details
-4. **Format your findings** into the required JSON structure
+2. **Analyze and synthesize** the research data from multiple sources including Reddit, Product Hunt, Stack Overflow
+3. **Extract detailed information** focusing on developer needs, community feedback, implementation details, and business information
+4. **Format your findings** into the required comprehensive JSON structure
 
 ## Required Output Format
 
@@ -174,37 +184,120 @@ You MUST output your findings in this exact JSON structure:
 
 ```json
 {
-  "Titre": "Name of the tool/API researched",
-  "subtitle": "A short descriptive sentence about the product/API",
-  "Github link": "Link to the official GitHub repository (if found, otherwise null)",
-  "Doc link": "Link to the official documentation (if found, otherwise null)",
-  "release date": "Release date of the tool/API (if found, otherwise null)",
-  "stack compatility tag": ["tag1", "tag2"],
-  "use case": [ 
-    {
-      "description": "Description of the use case", 
-      "repository_info": {
-        "link": "Link to an example GitHub repository (must have a link)",
-        "type": "officiel" 
-      } 
-    }
+  "title": "Extract the official name of the tool/API from research results",
+  "subtitle": "Extract a brief descriptive sentence about what the product/API does from documentation or descriptions",
+  "logo": "Use the tool name + .png format (e.g., 'openai.png')",
+  "logoUrl": "Look for official logo URL in documentation or construct reasonable URL based on tool name",
+  "tier_classification": "Classify as 'advanced', 'intermediate', or 'beginner' based on complexity and target audience",
+  "githubStars": "Extract the exact number of GitHub stars from repository information (integer, or null if not found)",
+  "votes": {
+    "up": "Estimate positive community sentiment as integer between 0 and 100 based on Reddit upvotes, positive feedback",
+    "down": "Estimate negative community sentiment as integer between 0 and 40 based on Reddit downvotes, negative feedback"
+  },
+  "relevanceScore": "Assign score 1-100 based on documentation quality, community adoption, GitHub stars, and overall popularity",
+  "releaseDate": "Extract the original release/launch date from research results (or null if not found)",
+  "lastUpdate": "Extract the most recent update date from GitHub, documentation, or release notes (or null if not found)",
+  "pros": [
+    "Extract positive points from Reddit discussions, community feedback, and user experiences",
+    "Include advantages mentioned in Stack Overflow answers and developer testimonials"
   ],
-  "pros": ["Pro 1 from community discussions (e.g., Reddit)", "Pro 2"],
-  "cons": ["Con 1 from community discussions (e.g., Reddit)", "Con 2"],
-  "pricing/business model": "Description of pricing or business model (if found, otherwise null)",
-  "security informations": "Security details like SOC II compliance, data security policies (if found, otherwise null)",
-  "MCP_link": "Link to the Model Context Protocol (official or community, if found, otherwise null)"
+  "cons": [
+    "Extract negative points from Reddit discussions, community complaints, and user experiences", 
+    "Include limitations mentioned in Stack Overflow questions and developer feedback"
+  ],
+  "pricing": {
+    "description": "Extract detailed pricing information from official documentation or pricing pages",
+    "freeThreshold": "Extract free tier limits (e.g., 'X requests per month', 'Y tokens', etc.) or null",
+    "paidRate": "Extract paid pricing rates (e.g., '$X per million tokens', '$Y per month') or null",
+    "model": "Extract business model type: 'pay-as-you-go', 'subscription', 'freemium', 'enterprise', etc."
+  },
+  "community": {
+    "peopleInsights": [
+      {
+        "platform": "Reddit",
+        "platformIcon": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png",
+        "title": "Reddit Discussion",
+        "upvotes": "Extract or estimate upvotes from Reddit discussions (integer)",
+        "description": "Summarize key points from Reddit discussions and community feedback"
+      },
+      {
+        "platform": "Product Hunt",
+        "platformIcon": "https://ph-static.imgix.net/ph-logo-1.png", 
+        "title": "Product Hunt",
+        "badge": "Extract Product Hunt ranking or achievements (e.g., '#1 Product of the Day') or null",
+        "description": "Extract Product Hunt launch details, reception, and community response"
+      },
+      {
+        "platform": "Stack Overflow",
+        "platformIcon": "https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico",
+        "title": "Stack Overflow", 
+        "description": "Summarize Stack Overflow discussions, question frequency, and developer community activity"
+      }
+    ],
+    "repositories": [
+      {
+        "name": "Extract repository names from GitHub search results and examples",
+        "author": "Extract GitHub username/organization (format: @username)",
+        "link": "Extract official GitHub repository URL from research results",
+        "badge": "Mark as 'Official' if from tool's organization, otherwise 'Community'"
+      }
+    ]
+  },
+  "integration": {
+    "officialResources": [
+      {
+        "title": "Official Documentation",
+        "url": "Extract official documentation URL from research results",
+        "type": "documentation"
+      },
+      {
+        "title": "GitHub Repository", 
+        "url": "Extract official GitHub repository URL from research results",
+        "type": "github"
+      }
+    ],
+    "complianceBadges": [
+      {
+        "name": "Extract compliance certifications mentioned (SOC2, ISO27001, GDPR, etc.)",
+        "color": "Use 'blue' for SOC2, 'green' for ISO27001, 'purple' for GDPR, 'orange' for others"
+      }
+    ],
+    "codeSnippets": {
+      "curl": {
+        "code": "Create realistic curl command example based on API documentation and examples found",
+        "installCommand": null
+      },
+      "python": {
+        "code": "Create realistic Python code example based on SDK documentation and examples found",
+        "installCommand": "Extract Python installation command (e.g., 'pip install package-name') from documentation"
+      },
+      "nodejs": {
+        "code": "Create realistic Node.js/JavaScript code example based on SDK documentation and examples found", 
+        "installCommand": "Extract Node.js installation command (e.g., 'npm install package-name') from documentation"
+      }
+    }
+  },
+  "rank": "Assign ranking 1-10 based on overall quality, popularity, documentation, and community adoption",
+  "category": "Extract or infer the API category (e.g., 'AI/ML API', 'Search API', 'Database API', etc.)",
+  "tags": ["Extract relevant technology tags from documentation and descriptions (e.g., 'AI', 'OpenAI', 'GPT', 'SDK', 'API')"],
+  "useCases": [
+    "Extract common use cases mentioned in documentation, examples, and community discussions",
+    "Include practical applications found in GitHub repositories and tutorials"
+  ]
 }
 ```
 
 ## Critical Instructions
 
 - **Output ONLY the JSON object** - no explanations, markdown, or conversational text
-- **Focus on developer-relevant information** from the research data
-- **Prioritize community feedback** (Reddit, forums) for pros/cons
-- **Use null for missing information** - do not guess or make up data
-- **Ensure use cases have GitHub repository links** - discard those without links
-- **Mark repository type** as "officiel" (official) or "communauté" (community)
+- **Focus on community feedback** (Reddit, Product Hunt, Stack Overflow) for pros/cons and insights
+- **Extract GitHub stars and community metrics** when available
+- **Create realistic code snippets** for curl, Python, and Node.js integration
+- **Include multiple repositories** in the community section (aim for 5-10 repositories)
+- **Estimate missing metrics** reasonably based on available data (relevanceScore, votes, etc.)
+- **Use null for missing information** - do not guess or make up specific data like exact numbers
+- **Ensure compliance badges reflect actual security certifications** mentioned in research
+- **Prioritize community-sourced pros/cons** over marketing materials
 
 Start your research immediately using the deep_research_tool.
 """

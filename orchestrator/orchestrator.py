@@ -7,7 +7,7 @@ from agents import Agent, Runner
 from agents.mcp.server import MCPServerSse, MCPServerSseParams
 import httpx
 from typing import Dict, Any, Optional
-from .prompts import orch_prompt2
+from .prompts import orch_prompt2, orch_prompt3
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ async def linkup_search(query: str, depth: str = "standard") -> str:
         "Content-Type": "application/json"
     }
     
-    depth = "standard"
+    depth = "deep"
     payload = {
         "q": query,
         "depth": depth,
@@ -68,8 +68,10 @@ async def linkup_search(query: str, depth: str = "standard") -> str:
                     for i, source in enumerate(sources, 1):
                         title = source.get("name", source.get("title", "No title"))
                         url = source.get("url", "No URL")
-                        formatted_result += f"{i}. {title} - {url}\n"
+                        snippet = source.get("snippet", "No snippet")
+                        formatted_result += f"{i}. {title} - {url}\n{snippet}\n\n"
                 
+                logger.info(f"linkup search result: {formatted_result}")
                 return formatted_result
             else:
                 logger.error(f"Linkup API error: {response.status_code} - {response.text}")
@@ -127,8 +129,10 @@ async def create_orchestrator():
     orchestrator = Agent(
         name="Orchestrator",
         model="gpt-4o-2024-08-06",
+        # model="o3-2025-04-16",
+        #model="o4-mini-2025-04-16",
         model_settings=ModelSettings(parallel_tool_calls=True),  # Enable parallel tool calls
-        instructions=orch_prompt2,  # Change to orch_prompt for comprehensive search
+        instructions=orch_prompt3,  # Change to orch_prompt for comprehensive search
         handoffs=[],  # No handoffs - using tools instead
         tools=[linkup_search, research_worker]  # Both search and research as parallel tools
     )
