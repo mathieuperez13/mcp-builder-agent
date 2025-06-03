@@ -1,14 +1,9 @@
 import asyncio
 import json
 from fastapi import FastAPI, HTTPException, Query, Request
-# BaseModel ne sera plus nécessaire si SearchQuery est supprimé
 import uvicorn
 import sys
 import os
-
-# Add worker directory to sys.path to allow direct import
-# This assumes api_server.py is in the root, and worker is a subdirectory
-sys.path.append(os.path.join(os.path.dirname(__file__), 'worker'))
 
 # Imports for the new search logic
 from orchestrator.orchestrator import create_orchestrator
@@ -18,7 +13,7 @@ try:
     # Attempt to import the refactored functions from worker.main_agent
     # IMPORTANT: This import will succeed ONLY if worker/main_agent.py has been
     # refactored to include `get_configured_agent` function.
-    from main_agent import get_configured_agent
+    from worker.main_agent import get_configured_agent
 except ImportError as e:
     print(f"ATTENTION: Erreur lors de l'importation depuis worker.main_agent: {e}")
     print("Cela signifie probablement que worker/main_agent.py n'a pas encore été adapté.")
@@ -46,6 +41,13 @@ async def startup_event():
     Au démarrage, essaie de pré-configurer l'agent et l'orchestrateur.
     """
     print("Démarrage du serveur API...")
+    # Debug: Print OPENAI_API_KEY
+    openai_api_key_value = os.environ.get("OPENAI_API_KEY")
+    if openai_api_key_value:
+        print(f"DEBUG: OPENAI_API_KEY vue par l'application: {openai_api_key_value[:5]}...{openai_api_key_value[-4:]}") # Affiche seulement une partie pour la sécurité
+    else:
+        print("DEBUG: OPENAI_API_KEY N'EST PAS TROUVÉE par l'application.")
+
     print("Tentative de pré-configuration de l'agent...")
     try:
         agent = await get_configured_agent()
