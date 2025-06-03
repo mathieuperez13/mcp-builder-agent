@@ -77,7 +77,7 @@ async def startup_event():
         # raise RuntimeError(f"Impossible de créer l'orchestrateur au démarrage: {e}")
 
 
-@app.post("/search/", response_model=None) # Exemple d'appel: POST /search/?question=Quelle+est+la+capitale+de+la+France
+@app.get("/search/", response_model=None) # Changé de POST à GET
 async def run_search_agent(request: Request, question: str = Query(..., description="Le sujet ou la question pour l'agent de recherche approfondie.")):
     """
     Point de terminaison pour exécuter l'agent de recherche approfondie.
