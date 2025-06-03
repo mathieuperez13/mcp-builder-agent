@@ -1,128 +1,84 @@
 import asyncio
 import json
 from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.responses import JSONResponse
 import uvicorn
 import sys
 import os
+import logging
+from dotenv import load_dotenv
 
-# Imports for the new search logic
+# Load environment variables from .env file
+load_dotenv()
+
+# Imports for the orchestrator logic (same as run_demo.py)
 from orchestrator.orchestrator import create_orchestrator
 from agents import Runner
 
-try:
-    # Attempt to import the refactored functions from worker.main_agent
-    # IMPORTANT: This import will succeed ONLY if worker/main_agent.py has been
-    # refactored to include `get_configured_agent` function.
-    from worker.main_agent import get_configured_agent
-except ImportError as e:
-    print(f"ATTENTION: Erreur lors de l'importation depuis worker.main_agent: {e}")
-    print("Cela signifie probablement que worker/main_agent.py n'a pas encore été adapté.")
-    print("L'API utilisera des fonctions de remplacement qui retourneront des erreurs.")
-    
-    # Placeholder function if the real one isn't available from worker.main_agent
-    async def get_configured_agent(): # type: ignore
-        print("LOGIQUE DE L'AGENT NON DISPONIBLE: Appel de get_configured_agent avec la version placeholder.")
-        print("Assurez-vous que worker/main_agent.py expose 'get_configured_agent'.")
-        return None
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="Deep Search Agent API",
-    description="API pour déclencher un agent de recherche approfondie pour un sujet donné.",
+    title="Agent to find apis API",
+    description="API for triggering the orchestrator agent to find and research tools based on user queries.",
     version="1.0.0"
 )
-# Initialize app.state for storing shared objects
-app.state.orchestrator = None
-app.state.agent = None
 
-
-@app.on_event("startup")
-async def startup_event():
+@app.get("/search/")
+async def run_search_agent(question: str = Query(..., description="The user query to search for tools and research them.")):
     """
-    Au démarrage, essaie de pré-configurer l'agent et l'orchestrateur.
+    Endpoint to run the orchestrator agent with the same logic as run_demo.py.
+    Takes a 'question' as URL parameter and returns the orchestrator's analysis.
     """
-    print("Démarrage du serveur API...")
-    # Debug: Print OPENAI_API_KEY
-    openai_api_key_value = os.environ.get("OPENAI_API_KEY")
-    if openai_api_key_value:
-        print(f"DEBUG: OPENAI_API_KEY vue par l'application: {openai_api_key_value[:5]}...{openai_api_key_value[-4:]}") # Affiche seulement une partie pour la sécurité
-    else:
-        print("DEBUG: OPENAI_API_KEY N'EST PAS TROUVÉE par l'application.")
-
-    print("Tentative de pré-configuration de l'agent...")
-    try:
-        agent = await get_configured_agent()
-        if agent:
-            app.state.agent = agent
-            print("Agent pré-configuré avec succès (si la vraie fonction a été importée).")
-        else:
-            print("La pré-configuration de l'agent a échoué ou a utilisé une version placeholder.")
-            print("Vérifiez la configuration LLM, les clés API et l'état de worker/main_agent.py.")
-    except Exception as e:
-        print(f"Erreur lors de la pré-configuration de l'agent: {e}")
-        app.state.agent = None # Assurer un état cohérent
-
-    print("Tentative de création de l'orchestrateur...")
-    try:
-        orchestrator = await create_orchestrator()
-        app.state.orchestrator = orchestrator
-        if orchestrator:
-            print("Orchestrateur créé avec succès.")
-        else:
-            # create_orchestrator pourrait retourner None ou lever une exception en cas d'échec
-            print("La création de l'orchestrateur a échoué (retourné None).")
-    except Exception as e:
-        print(f"Erreur lors de la création de l'orchestrateur au démarrage: {e}")
-        app.state.orchestrator = None # Assurer un état cohérent
-        # Optionnel: lever une exception ici si l'orchestrateur est critique pour démarrer
-        # raise RuntimeError(f"Impossible de créer l'orchestrateur au démarrage: {e}")
-
-
-@app.get("/search/", response_model=None) # Changé de POST à GET
-async def run_search_agent(request: Request, question: str = Query(..., description="Le sujet ou la question pour l'agent de recherche approfondie.")):
-    """
-    Point de terminaison pour exécuter l'agent de recherche approfondie.
-    Prend une 'question' comme paramètre d'URL et retourne la sortie JSON de l'agent.
-    Utilise l'orchestrateur pré-initialisé.
-    """
-    print(f"Requête de recherche reçue pour: {question}")
-    if not question or not question.strip():
-        raise HTTPException(status_code=400, detail="La question ne peut pas être vide.")
+    logger.info(f"=== API Search Request Started ===")
+    logger.info(f"User request received: '{question}'")
     
-    orchestrator = request.app.state.orchestrator
-    if orchestrator is None:
-        print("ERREUR: L'orchestrateur n'est pas initialisé. Vérifiez les logs de démarrage.")
-        raise HTTPException(status_code=503, detail={"error": "Service non disponible", "message": "L'orchestrateur n'a pas pu être initialisé."})
-
+    if not question or not question.strip():
+        raise HTTPException(status_code=400, detail="The question cannot be empty.")
+    
     try:
-        user_request = question
-        print(f"INFO: Utilisation de l'orchestrateur pré-initialisé pour la requête: '{user_request}'")
+        logger.info("Creating Orchestrator with connected MCP servers...")
+        orchestrator = await create_orchestrator()
         
-        print(f"INFO: Démarrage de l'orchestration de l'agent REAL avec l'Orchestrateur pour: '{user_request}'")
+        if not orchestrator:
+            logger.error("Failed to create orchestrator")
+            raise HTTPException(status_code=503, detail={"error": "Service unavailable", "message": "Could not initialize orchestrator."})
+        
+        logger.info("Starting agent orchestration with Orchestrator...")
         # Using max_turns=25 as in run_demo.py
-        result = await Runner.run(orchestrator, user_request, max_turns=25) 
+        result = await Runner.run(orchestrator, question, max_turns=25) 
         
-        print("INFO: Orchestration de l'agent REAL terminée avec succès")
-        print(f"INFO: Résultat final (pour les logs serveur): {result.final_output}") 
+        logger.info("Agent orchestration completed successfully")
+        logger.info(f"Final result: {result.final_output}")
         
-        return result.final_output
+        # Return as explicit JSON response
+        try:
+            parsed_json = json.loads(result.final_output)
+            return JSONResponse(content=parsed_json)
+        except json.JSONDecodeError:
+            # If it's not valid JSON, wrap it in a JSON structure
+            return JSONResponse(content={"result": result.final_output})
 
     except Exception as e:
-        print(f"ERREUR: Une erreur inattendue est survenue dans le point de terminaison /search: {e}")
-        import traceback
-        traceback.print_exc() 
+        logger.error(f"Error during API execution: {str(e)}", exc_info=True)
         raise HTTPException(
             status_code=500, 
-            detail={"error": "Une erreur inattendue est survenue lors du traitement de votre requête.", "details": str(e)}
+            detail={"error": "An unexpected error occurred while processing your request.", "details": str(e)}
         )
 
 @app.get("/")
 async def read_root():
-    return {"message": "Bienvenue sur l'API Deep Search Agent. Utilisez le point de terminaison /search/ pour faire des requêtes."}
-
-
-
+    return {
+        "message": "Welcome to the Agent for API", 
+        "description": "Use the /search/ endpoint to query for tools and get comprehensive analysis",
+        "example": "/search/?question=I need a tool for image generation"
+    }
 
 if __name__ == "__main__":
-    print("Démarrage du serveur Uvicorn pour l'API Deep Search Agent...")
-    # Assurez-vous que LINKUP_API_KEY et les autres variables d'environnement nécessaires sont définies.
-    uvicorn.run(app, host="0.0.0.0", port=8034) 
+    logger.info("Starting Uvicorn server for MCP Builder Agent API...")
+    # Make sure LINKUP_API_KEY and other environment variables are set
+    uvicorn.run(app, host="0.0.0.0", port=8001) 

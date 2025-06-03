@@ -336,7 +336,8 @@ def create_worker_agent() -> Agent:
     
     worker = Agent(
         name="worker",
-        model=llm_model,
+        # model=llm_model,
+        model="gpt-4o-2024-08-06",
         instructions=personalized_prompt,
         tools=[deep_research_tool]
     )
