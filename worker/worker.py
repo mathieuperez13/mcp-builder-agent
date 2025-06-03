@@ -277,7 +277,6 @@ You MUST output your findings in this exact JSON structure:
       }
     }
   },
-  "rank": "Assign ranking 1-10 based on overall quality, popularity, documentation, and community adoption",
   "category": "Extract or infer the API category (e.g., 'AI/ML API', 'Search API', 'Database API', etc.)",
   "tags": ["Extract relevant technology tags from documentation and descriptions (e.g., 'AI', 'OpenAI', 'GPT', 'SDK', 'API')"],
   "useCases": [
