@@ -3,8 +3,8 @@ import os
 import json
 from agents import Agent, Runner
 from agents.extensions.models.litellm_model import LitellmModel
-from agent_tools import LinkupSearchTool
-from config import OPENAI_API_KEY, ANTHROPIC_API_KEY, LINKUP_API_KEY, CLAUDE_MODEL_NAME
+from .agent_tools import LinkupSearchTool
+from .config import OPENAI_API_KEY, ANTHROPIC_API_KEY, LINKUP_API_KEY, CLAUDE_MODEL_NAME
 
 def run_deep_search_agent():
     """

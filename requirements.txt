@@ -57,3 +57,24 @@ urllib3==2.4.0
 uvicorn==0.34.3
 yarl==1.20.0
 zipp==3.22.0
+# OpenAI Agent SDK
+openai-agent-sdk
+
+# LiteLLM for model inference
+litellm
+
+# MCP (Model Context Protocol) related
+mcp
+
+# Async support
+asyncio
+
+# HTTP client for API calls
+httpx
+
+# JSON handling (usually built-in, but good to be explicit)
+# Standard library modules don't need to be listed
+
+# Optional: Additional helpful packages
+python-dotenv  # For environment variable management
+pydantic       # For data validation 

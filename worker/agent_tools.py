@@ -1,7 +1,8 @@
 import asyncio
 import json
 from agents.tool import FunctionTool # from openai-agents SDK
-from linkup_service import search_with_linkup # Our asynchronous service
+from .linkup_service import search_with_linkup # Our asynchronous service
+from .config import LINKUP_API_KEY # Ensure LINKUP_API_KEY is available for the test
 
 class LinkupSearchTool(FunctionTool):
     def __init__(self):
@@ -109,7 +110,6 @@ if __name__ == '__main__':
         print("Testing LinkupSearchTool...")
         tool = LinkupSearchTool()
         
-        from config import LINKUP_API_KEY # Ensure LINKUP_API_KEY is available for the test
         if not LINKUP_API_KEY:
             print("ERROR: LINKUP_API_KEY is not set. Please configure it in your .env file for this test.")
             return

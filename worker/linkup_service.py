@@ -2,7 +2,7 @@ import asyncio
 import json
 import os
 from linkup import LinkupClient # Official Linkup SDK
-from config import LINKUP_API_KEY
+from .config import LINKUP_API_KEY
 
 # Le nom de la variable d'environnement est géré dans config.py maintenant
 # EXPECTED_LINKUP_API_KEY_ENV_NAME = "LINKUP_API_KEY"
